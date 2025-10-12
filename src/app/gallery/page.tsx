@@ -2,23 +2,25 @@ import { GalleryGrid } from '@/components/GalleryGrid'
 
 export default function GalleryPage(): JSX.Element {
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-elegant font-bold text-white mb-6">
-            Notre Galerie
+    <div className="min-h-screen px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+            Galerie
+          </p>
+          <h1 className="mt-4 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
+            Nos realisations
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Découvrez nos réalisations en décoration événementielle. 
-            Chaque événement est unique et nous mettons tout notre savoir-faire 
-            pour créer des moments inoubliables.
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-neutral-600">
+            Un apercu de nos scenographies : mariages, anniversaires, ceremonies
+            officielles et projets sur mesure concus pour marquer les esprits.
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <GalleryGrid />
+        <div className="mt-16">
+          <GalleryGrid />
+        </div>
       </div>
     </div>
   )
-} 
+}

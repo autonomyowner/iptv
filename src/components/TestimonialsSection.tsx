@@ -5,90 +5,68 @@ type Testimonial = {
   name: string
   event: string
   content: string
-  rating: number
+  rating: string
   image: string
 }
 
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Amina & Karim',
-    event: 'Mariage',
-    content: 'Perfect Events a transformé notre mariage en un rêve éveillé. La décoration était magnifique et l\'équipe très professionnelle. Nous recommandons vivement !',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    name: 'Amina et Karim',
+    event: 'Mariage intimiste',
+    content:
+      "Perfect Events a sublime notre mariage. L equipe a compris notre vision et l a transformee en un decor chaleureux et raffine.",
+    rating: '5/5 satisfaction',
+    image:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: '2',
     name: 'Fatima',
     event: 'Anniversaire 50 ans',
-    content: 'Une décoration exceptionnelle pour l\'anniversaire de ma mère. L\'équipe a su créer une ambiance chaleureuse et élégante. Service impeccable !',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    content:
+      "Une decoration sur mesure qui a totalement charme nos invites. Tout etait coordonne avec soin et beaucoup de gout.",
+    rating: '5/5 satisfaction',
+    image:
+      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: '3',
     name: 'Mohammed',
-    event: 'Cérémonie religieuse',
-    content: 'Décoration respectueuse et solennelle pour notre cérémonie. L\'équipe a parfaitement compris nos besoins et a créé une atmosphère appropriée.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-  }
+    event: 'Ceremonie familiale',
+    content:
+      "Un decor respectueux et elegant qui a apporte beaucoup de douceur a notre ceremonie. Service attentionne du debut a la fin.",
+    rating: '5/5 satisfaction',
+    image:
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=80',
+  },
 ]
-
-const StarRating = ({ rating }: { rating: number }): JSX.Element => {
-  return (
-    <div className="flex items-center space-x-1">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          className={`w-5 h-5 ${
-            index < rating ? 'text-yellow-400' : 'text-gray-400'
-          }`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  )
-}
 
 export const TestimonialsSection = (): JSX.Element => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-red-900/10 to-slate-900">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-elegant font-bold text-white mb-6">
-            Avis de Nos Clients
+    <section className="border-y border-neutral-200 bg-white/80 px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+            Confiance clients
+          </p>
+          <h2 className="mt-5 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
+            Des evenements qui laissent une impression durable
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Découvrez ce que nos clients disent de nos services de décoration événementielle.
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600">
+            Chaque projet est accompagne avec discretion et rigueur pour offrir
+            une experience memorables aux personnes qui nous font confiance.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {testimonials.map((testimonial) => (
-            <div
+            <article
               key={testimonial.id}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-slate-700/50"
+              className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-white/90 p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              {/* Rating */}
-              <div className="mb-4">
-                <StarRating rating={testimonial.rating} />
-              </div>
-
-              {/* Content */}
-              <blockquote className="text-gray-300 leading-relaxed mb-6 italic">
-                &ldquo;{testimonial.content}&rdquo;
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center space-x-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+              <div className="flex items-center gap-4">
+                <div className="relative h-14 w-14 overflow-hidden rounded-full border border-neutral-200">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -97,46 +75,50 @@ export const TestimonialsSection = (): JSX.Element => {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-white">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-500">
+                    {testimonial.rating}
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-neutral-900">
                     {testimonial.name}
-                  </div>
-                  <div className="text-sm text-red-400">
-                    {testimonial.event}
-                  </div>
+                  </p>
+                  <p className="text-sm text-neutral-500">{testimonial.event}</p>
                 </div>
               </div>
-            </div>
+
+              <p className="mt-6 flex-1 text-sm leading-relaxed text-neutral-600">
+                {`"${testimonial.content}"`}
+              </p>
+            </article>
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-4xl font-elegant font-bold text-red-400 mb-2">
+        <div className="mt-16 grid grid-cols-1 gap-6 text-center sm:grid-cols-3">
+          <div className="rounded-3xl border border-neutral-200 bg-white/70 px-6 py-8">
+            <p className="text-4xl font-elegant font-semibold text-neutral-900">
               100+
-            </div>
-            <div className="text-gray-300">
-              Événements Réalisés
-            </div>
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[0.35em] text-neutral-500">
+              Evenements realises
+            </p>
           </div>
-          <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-4xl font-elegant font-bold text-red-400 mb-2">
-              5.0
-            </div>
-            <div className="text-gray-300">
-              Note Moyenne
-            </div>
-          </div>
-          <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-4xl font-elegant font-bold text-red-400 mb-2">
+          <div className="rounded-3xl border border-neutral-200 bg-white/70 px-6 py-8">
+            <p className="text-4xl font-elegant font-semibold text-neutral-900">
               3+
-            </div>
-            <div className="text-gray-300">
-              Années d&apos;Expérience
-            </div>
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[0.35em] text-neutral-500">
+              Annees d experience
+            </p>
+          </div>
+          <div className="rounded-3xl border border-neutral-200 bg-white/70 px-6 py-8">
+            <p className="text-4xl font-elegant font-semibold text-neutral-900">
+              Equipe dediee
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[0.35em] text-neutral-500">
+              Conseil sur mesure
+            </p>
           </div>
         </div>
       </div>
     </section>
   )
-} 
+}

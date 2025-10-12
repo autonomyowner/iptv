@@ -1,132 +1,101 @@
-export const LocationMap = (): JSX.Element => {
-  const serviceAreas = [
-    'Tlemcen Centre',
-    'Tlemcen Ouest',
-    'Tlemcen Est',
-    'Aïn Témouchent',
-    'Oran (sur demande)',
-    'Mostaganem (sur demande)'
-  ]
+const serviceAreas = [
+  'Tlemcen centre',
+  'Tlemcen ouest',
+  'Tlemcen est',
+  'Ain Temouchent',
+  'Oran (sur demande)',
+  'Mostaganem (sur demande)',
+]
 
+export const LocationMap = (): JSX.Element => {
   return (
     <div className="space-y-8">
-      {/* Service Area */}
-      <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
-        <h2 className="text-3xl font-elegant font-bold text-white mb-8">
-          Zone de Service
+      <div className="rounded-3xl border border-neutral-200 bg-white/90 px-6 py-10 shadow-sm">
+        <h2 className="text-2xl font-elegant font-semibold text-neutral-900">
+          Zone de service
         </h2>
-        
-        <div className="mb-6">
-          <p className="text-gray-300 leading-relaxed mb-4">
-            Nous servons principalement la région de Tlemcen et ses environs. 
-            Pour les événements en dehors de notre zone habituelle, contactez-nous 
-            pour discuter des possibilités.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {serviceAreas.map((area, index) => (
-            <div key={index} className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-              <span className="text-gray-300">{area}</span>
+        <p className="mt-4 text-sm leading-relaxed text-neutral-600">
+          Nous intervenons principalement a Tlemcen et sur demande dans les
+          villes voisines. Pour tout projet hors zone, contactez-nous afin
+          d evaluer la faisabilite et les frais eventuels.
+        </p>
+        <div className="mt-6 grid grid-cols-1 gap-3 text-sm text-neutral-600 sm:grid-cols-2">
+          {serviceAreas.map((area) => (
+            <div
+              key={area}
+              className="rounded-2xl border border-neutral-200 bg-white/80 px-4 py-3"
+            >
+              {area}
             </div>
           ))}
         </div>
-
-        <div className="mt-6 p-4 bg-blue-600/20 rounded-lg border border-blue-500/30">
-          <p className="text-blue-300 text-sm">
-            🌍 <strong>Note :</strong> Pour les événements en dehors de notre zone habituelle, 
-            des frais de déplacement peuvent s&apos;appliquer.
-          </p>
-        </div>
+        <p className="mt-6 text-xs uppercase tracking-[0.3em] text-neutral-500">
+          Deplacements longs sur devis supplementaire
+        </p>
       </div>
 
-      {/* Map Placeholder */}
-      <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
-        <h2 className="text-3xl font-elegant font-bold text-white mb-8">
-          Notre Localisation
-        </h2>
-        
-        <div className="relative h-64 bg-slate-700 rounded-lg overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-4xl mb-4">📍</div>
-              <p className="text-gray-300 mb-2">Tlemcen, Algérie</p>
-              <p className="text-sm text-gray-400">
-                Carte interactive à venir
-              </p>
-            </div>
+      <div className="rounded-3xl border border-neutral-200 bg-white/80 px-6 py-10 shadow-sm">
+        <h3 className="text-lg font-semibold text-neutral-900">
+          Notre localisation
+        </h3>
+        <div className="mt-6 h-64 rounded-2xl border border-neutral-200 bg-neutral-100/70">
+          <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.3em] text-neutral-500">
+            Carte interactive bientot disponible
           </div>
         </div>
-
-        <div className="mt-6 space-y-4">
-          <div className="flex items-start space-x-3">
-            <div className="text-red-400 mt-1">📍</div>
-            <div>
-              <h4 className="text-white font-semibold mb-1">Adresse</h4>
-              <p className="text-gray-300 text-sm">
-                Tlemcen, Wilaya de Tlemcen<br />
-                Algérie
-              </p>
-            </div>
+        <div className="mt-6 grid gap-4 text-sm text-neutral-600">
+          <div>
+            <p className="font-semibold text-neutral-900">Adresse</p>
+            <p className="mt-1">
+              Tlemcen, Wilaya de Tlemcen
+              <br />
+              Algerie
+            </p>
           </div>
-
-          <div className="flex items-start space-x-3">
-            <div className="text-red-400 mt-1">🚗</div>
-            <div>
-              <h4 className="text-white font-semibold mb-1">Accessibilité</h4>
-              <p className="text-gray-300 text-sm">
-                Facilement accessible en voiture<br />
-                Parking disponible sur demande
-              </p>
-            </div>
+          <div>
+            <p className="font-semibold text-neutral-900">Accessibilite</p>
+            <p className="mt-1">
+              Acces facile en voiture, possibilite de parking sur demande.
+            </p>
           </div>
-
-          <div className="flex items-start space-x-3">
-            <div className="text-red-400 mt-1">🌍</div>
-            <div>
-              <h4 className="text-white font-semibold mb-1">Couverture</h4>
-              <p className="text-gray-300 text-sm">
-                Service disponible dans un rayon de 50km<br />
-                Déplacements plus loin sur demande
-              </p>
-            </div>
+          <div>
+            <p className="font-semibold text-neutral-900">Couverture</p>
+            <p className="mt-1">
+              Intervention dans un rayon de 50 km, extensions possibles avec
+              frais de deplacement.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Additional Info */}
-      <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
-        <h2 className="text-3xl font-elegant font-bold text-white mb-8">
-          Informations Pratiques
-        </h2>
-        
-        <div className="space-y-6">
+      <div className="rounded-3xl border border-neutral-200 bg-white/80 px-6 py-8 shadow-sm">
+        <h3 className="text-lg font-semibold text-neutral-900">
+          Informations pratiques
+        </h3>
+        <div className="mt-4 grid gap-4 text-sm text-neutral-600">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-3">Rendez-vous</h3>
-            <p className="text-gray-300 text-sm">
-              Nous proposons des rendez-vous à domicile pour discuter de votre projet 
-              et prendre les mesures nécessaires. Contactez-nous pour planifier une visite.
+            <p className="font-semibold text-neutral-900">Rendez-vous</p>
+            <p className="mt-1">
+              Possibilite de rendez-vous sur site pour comprendre vos besoins et
+              prendre les mesures necessaires.
             </p>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold text-white mb-3">Installation</h3>
-            <p className="text-gray-300 text-sm">
-              Notre équipe se déplace sur site pour l&apos;installation et le démontage 
-              de tous nos décors. Nous nous adaptons à vos horaires et contraintes.
+            <p className="font-semibold text-neutral-900">Installation</p>
+            <p className="mt-1">
+              Equipe dediee pour installer et demonter les elements de decor,
+              avec respect des contraintes horaires.
             </p>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold text-white mb-3">Urgences</h3>
-            <p className="text-gray-300 text-sm">
-              Pour les événements en urgence ou les modifications de dernière minute, 
-              contactez-nous sur WhatsApp pour une réponse rapide.
+            <p className="font-semibold text-neutral-900">Urgences</p>
+            <p className="mt-1">
+              Pour les demandes de derniere minute, privilégiez WhatsApp pour
+              obtenir une reponse rapide.
             </p>
           </div>
         </div>
       </div>
     </div>
   )
-} 
+}

@@ -4,22 +4,24 @@ import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 })
 
-const playfair = Playfair_Display({ 
+const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Perfect Events ❤️ - Décoration événementielle à Tlemcen',
-  description: 'Décoration événementielle et organisation d\'événements à Tlemcen. Services personnalisés et élégants pour vos événements spéciaux.',
-  keywords: 'décoration événementielle, Tlemcen, événements, mariage, anniversaire, cérémonie, organisation événements',
+  title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+  description:
+    'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
+  keywords:
+    'decoration evennementielle, Tlemcen, evenements, mariage, anniversaire, ceremonie, organisation',
   authors: [{ name: 'Perfect Events' }],
   creator: 'Perfect Events',
   publisher: 'Perfect Events',
@@ -33,8 +35,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Perfect Events ❤️ - Décoration événementielle à Tlemcen',
-    description: 'Décoration événementielle et organisation d\'événements à Tlemcen. Services personnalisés et élégants pour vos événements spéciaux.',
+    title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+    description:
+      'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
     url: 'https://perfect-events-tlemcen.com',
     siteName: 'Perfect Events',
     images: [
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Perfect Events - Décoration événementielle à Tlemcen',
+        alt: 'Perfect Events - Decoration evennementielle a Tlemcen',
       },
     ],
     locale: 'fr_DZ',
@@ -50,8 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Perfect Events ❤️ - Décoration événementielle à Tlemcen',
-    description: 'Décoration événementielle et organisation d\'événements à Tlemcen. Services personnalisés et élégants pour vos événements spéciaux.',
+    title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+    description:
+      'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -77,13 +81,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} bg-gradient-elegant min-h-screen`}>
+      <body
+        className={`${inter.className} bg-gradient-elegant min-h-screen text-slate-900`}
+      >
         <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
+        <main className="pt-20 md:pt-24 pb-20">{children}</main>
+        <footer className="bg-slate-900 text-white py-4">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-sm">
+              Made by{' '}
+              <a
+                href="https://www.sitedz.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-400 hover:text-primary-300 transition-colors underline"
+              >
+                www.sitedz.store
+              </a>
+            </p>
+          </div>
+        </footer>
         <WhatsAppButton />
       </body>
     </html>
   )
-} 
+}

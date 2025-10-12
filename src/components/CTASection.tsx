@@ -3,8 +3,11 @@
 export const CTASection = (): JSX.Element => {
   const handleWhatsAppClick = (): void => {
     const phoneNumber = '+213123456789'
-    const message = 'Bonjour! Je souhaite réserver vos services de décoration événementielle.'
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    const message =
+      'Bonjour! Je souhaite reserver vos services de decoration evennementielle.'
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message,
+    )}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -12,79 +15,90 @@ export const CTASection = (): JSX.Element => {
     window.open('tel:+213123456789', '_self')
   }
 
-  const handleKeyDown = (event: React.KeyboardEvent): void => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      handleWhatsAppClick()
-    }
+  const handleEmailClick = (): void => {
+    window.open('mailto:contact@perfect-events-tlemcen.com', '_self')
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Main CTA */}
-        <div className="mb-12">
-          <h2 className="text-4xl sm:text-5xl font-elegant font-bold text-white mb-6">
-            Prêt à Créer Votre Événement Parfait ?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès maintenant pour discuter de votre projet et obtenir 
-            un devis personnalisé pour votre événement.
+    <section className="px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl rounded-3xl border border-neutral-200 bg-white/85 px-6 py-16 shadow-sm sm:px-10">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+            Pret a planifier
           </p>
-          
+          <h2 className="mt-4 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
+            Imaginons ensemble votre prochain evennement
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-neutral-600">
+            Partagez vos envies et contraintes, nous nous chargeons de concevoir
+            une experience soigneuse, harmonieuse et parfaitement coordonnee.
+          </p>
+        </div>
+
+        <div className="mt-10 flex justify-center">
           <button
             onClick={handleWhatsAppClick}
-            onKeyDown={handleKeyDown}
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-300 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
-            aria-label="Contactez-nous sur WhatsApp"
-            tabIndex={0}
+            className="rounded-full bg-neutral-900 px-10 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-200 hover:bg-neutral-700"
+            type="button"
           >
-            📞 Réserver Maintenant
+            Reserver un appel
           </button>
         </div>
 
-        {/* Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-3xl mb-4">📱</div>
-            <h3 className="text-xl font-semibold text-white mb-2">WhatsApp</h3>
-            <p className="text-gray-300 mb-4">Contact rapide et direct</p>
+        <div className="mt-14 grid grid-cols-1 gap-6 text-center sm:grid-cols-3">
+          <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              WhatsApp
+            </p>
+            <p className="mt-4 text-lg font-semibold text-neutral-900">
+              +213 123 456 789
+            </p>
             <button
               onClick={handleWhatsAppClick}
-              className="text-red-400 hover:text-red-300 font-medium transition-colors duration-200"
+              className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-amber-700 underline underline-offset-4"
+              type="button"
             >
-              +213 123 456 789
+              Demarrer la conversation
             </button>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-3xl mb-4">📞</div>
-            <h3 className="text-xl font-semibold text-white mb-2">Téléphone</h3>
-            <p className="text-gray-300 mb-4">Appel direct</p>
+          <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              Telephone
+            </p>
+            <p className="mt-4 text-lg font-semibold text-neutral-900">
+              +213 123 456 789
+            </p>
             <button
               onClick={handlePhoneClick}
-              className="text-red-400 hover:text-red-300 font-medium transition-colors duration-200"
+              className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-amber-700 underline underline-offset-4"
+              type="button"
             >
-              +213 123 456 789
+              Appeler maintenant
             </button>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50">
-            <div className="text-3xl mb-4">📍</div>
-            <h3 className="text-xl font-semibold text-white mb-2">Localisation</h3>
-            <p className="text-gray-300 mb-4">Zone de service</p>
-            <p className="text-red-400 font-medium">
-              Tlemcen et environs
+          <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+              Email
             </p>
+            <p className="mt-4 text-lg font-semibold text-neutral-900">
+              contact@perfect-events-tlemcen.com
+            </p>
+            <button
+              onClick={handleEmailClick}
+              className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-amber-700 underline underline-offset-4"
+              type="button"
+            >
+              Envoyer un message
+            </button>
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 text-gray-400 text-sm">
-          <p>✨ Services sur demande - Pas de paiement en ligne</p>
-          <p className="mt-2">📅 Disponible 7j/7 pour vos événements</p>
+        <div className="mt-10 border-t border-neutral-200 pt-8 text-center text-xs uppercase tracking-[0.35em] text-neutral-500">
+          Disponibles 7j/7 selon vos evennements
         </div>
       </div>
     </section>
   )
-} 
+}

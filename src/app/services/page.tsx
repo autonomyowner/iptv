@@ -3,25 +3,27 @@ import { PricingSection } from '@/components/PricingSection'
 
 export default function ServicesPage(): JSX.Element {
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-elegant font-bold text-white mb-6">
-            Nos Services
+    <div className="min-h-screen px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+            Prestations
+          </p>
+          <h1 className="mt-4 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
+            Nos services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Découvrez notre gamme complète de services de décoration événementielle. 
-            Chaque service est personnalisé selon vos besoins et votre budget.
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-neutral-600">
+            Explorez notre accompagnement pour concevoir, installer et sublimer
+            vos evenements avec une approche soigneuse et personnalisee.
           </p>
         </div>
 
-        {/* Services List */}
-        <ServicesList />
-        
-        {/* Pricing Section */}
+        <div className="mt-16">
+          <ServicesList />
+        </div>
+
         <PricingSection />
       </div>
     </div>
   )
-} 
+}

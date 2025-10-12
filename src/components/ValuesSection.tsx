@@ -1,110 +1,97 @@
-export const ValuesSection = (): JSX.Element => {
-  const values = [
-    {
-      icon: '💎',
-      title: 'Excellence',
-      description: 'Nous visons l\'excellence dans chaque détail, de la conception à l\'installation finale.'
-    },
-    {
-      icon: '🎨',
-      title: 'Créativité',
-      description: 'Notre équipe créative transforme vos idées en décors uniques et mémorables.'
-    },
-    {
-      icon: '🤝',
-      title: 'Confiance',
-      description: 'Nous construisons des relations durables basées sur la confiance et la transparence.'
-    },
-    {
-      icon: '⏰',
-      title: 'Ponctualité',
-      description: 'Nous respectons vos délais et nous engageons à être ponctuels pour tous vos événements.'
-    },
-    {
-      icon: '💝',
-      title: 'Personnalisation',
-      description: 'Chaque projet est unique et mérite une approche personnalisée selon vos besoins.'
-    },
-    {
-      icon: '🌟',
-      title: 'Passion',
-      description: 'Notre passion pour la décoration nous pousse à créer des expériences extraordinaires.'
-    }
-  ]
+type ValueItem = {
+  title: string
+  description: string
+}
 
+const values: ValueItem[] = [
+  {
+    title: 'Excellence',
+    description:
+      'Une exigence constante dans le choix des materiaux, des finitions et des partenaires.',
+  },
+  {
+    title: 'Creativite',
+    description:
+      'Des propositions singulieres qui respectent votre identite et l esprit du lieu.',
+  },
+  {
+    title: 'Confiance',
+    description:
+      'Un dialogue transparent a chaque etape pour avancer sereinement ensemble.',
+  },
+  {
+    title: 'Ponctualite',
+    description:
+      'Une organisation precise pour garantir des installations maitrisees et ponctuelles.',
+  },
+  {
+    title: 'Personnalisation',
+    description:
+      'Chaque scenographie est concue sur mesure a partir de vos envies et contraintes.',
+  },
+  {
+    title: 'Passion',
+    description:
+      'Une equipe impliquee qui veille a ce que chaque moment soit soigneusement sublime.',
+  },
+]
+
+export const ValuesSection = (): JSX.Element => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-elegant font-bold text-white mb-6">
-            Nos Valeurs
+    <section className="border-t border-neutral-200 bg-white/70 px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+            Notre approche
+          </p>
+          <h2 className="mt-5 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
+            Des valeurs qui guident chaque projet
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ces valeurs guident chacune de nos actions et nous permettent de créer 
-            des expériences exceptionnelles pour nos clients.
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-neutral-600">
+            Collaboration, precision et sens du service structurent notre facon
+            d accompagner les evenements. Nous cultivons des relations solides
+            et durables avec nos clients.
           </p>
         </div>
 
-        {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {values.map((value) => (
             <div
-              key={index}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-red-500/50 transition-all duration-300 transform hover:scale-105"
+              key={value.title}
+              className="rounded-3xl border border-neutral-200 bg-white/90 px-6 py-8 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="text-4xl mb-4">{value.icon}</div>
-              <h3 className="text-2xl font-elegant font-semibold text-white mb-4">
+              <h3 className="text-xl font-semibold text-neutral-900">
                 {value.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="mt-4 text-sm leading-relaxed text-neutral-600">
                 {value.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Commitment Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-slate-700/50">
-            <h3 className="text-3xl font-elegant font-bold text-white mb-6">
-              Notre Engagement
-            </h3>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Nous nous engageons à créer des expériences uniques et mémorables pour chaque client. 
-              Notre équipe dévouée travaille avec passion pour transformer vos rêves en réalité, 
-              en respectant vos besoins, votre budget et vos délais.
-            </p>
-            
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-2xl font-elegant font-bold text-red-400 mb-2">
-                  Qualité
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Matériaux de première qualité
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-elegant font-bold text-red-400 mb-2">
-                  Service
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Accompagnement personnalisé
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-elegant font-bold text-red-400 mb-2">
-                  Satisfaction
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Clients 100% satisfaits
-                </p>
-              </div>
+        <div className="mt-20 rounded-3xl border border-neutral-200 bg-white/85 px-6 py-12 text-center shadow-sm sm:px-12">
+          <h3 className="text-2xl font-elegant font-semibold text-neutral-900">
+            Notre engagement
+          </h3>
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-neutral-600">
+            Assurer une experience fluide et respectueuse de vos delais. Nous
+            orchestrons la logistique, la coordination fournisseurs et les
+            installations avec la meme attention que pour la phase creative.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 text-sm uppercase tracking-[0.3em] text-neutral-500 sm:grid-cols-3">
+            <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-6">
+              Qualite
+            </div>
+            <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-6">
+              Service
+            </div>
+            <div className="rounded-2xl border border-neutral-200 bg-white/80 px-6 py-6">
+              Satisfaction
             </div>
           </div>
         </div>
       </div>
     </section>
   )
-} 
+}

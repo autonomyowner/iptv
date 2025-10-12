@@ -5,181 +5,177 @@ type Service = {
   title: string
   description: string
   features: string[]
-  icon: string
   image: string
+  signature: string
 }
 
 const services: Service[] = [
   {
     id: 'weddings',
-    title: 'Décoration de Mariages',
-    description: 'Transformez votre jour J en un événement de rêve avec notre décoration de mariage personnalisée. Nous créons l\'ambiance parfaite pour célébrer votre amour.',
+    title: 'Decoration de mariages',
+    description:
+      'Ambiances poetiques, arches florales, design de table et scenographie generale pour une celebration elegante et harmonieuse.',
     features: [
-      'Décoration de salle de réception',
-      'Arches et structures florales',
-      'Décoration de table de mariage',
-      'Photobooth et zones photos',
-      'Éclairage d\'ambiance',
-      'Décoration d\'entrée et couloirs'
+      'Direction artistique et moodboards',
+      'Amenagement de la ceremonie et de la reception',
+      'Centres de table, lumieres et textiles coordonnes',
+      'Espaces photos dedies aux invites',
+      'Installation, suivi sur site et demontage',
     ],
-    icon: '💒',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+    signature: 'Romance sur mesure',
   },
   {
     id: 'birthdays',
-    title: 'Décoration d\'Anniversaires',
-    description: 'Fêtez vos anniversaires avec style ! Nous créons des décors personnalisés pour tous les âges et toutes les thématiques.',
+    title: 'Decoration d anniversaires',
+    description:
+      'Des univers festifs et personnalises pour celebrer chaque age avec originalite, que ce soit en famille ou entre amis.',
     features: [
-      'Décoration selon l\'âge et les goûts',
-      'Thématiques personnalisées',
-      'Ballons et guirlandes décoratives',
-      'Décoration de gâteau',
-      'Zones photos thématiques',
-      'Éclairage festif'
+      'Concept et palette chromatique personnalises',
+      'Structures decoratives, arches et fonds photo',
+      'Table de reception ou buffet coordonne',
+      'Accessoires, papeterie et signaletique',
+      'Assistance logistique le jour J',
     ],
-    icon: '🎂',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image:
+      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+    signature: 'Celebration taillee a vos envies',
   },
   {
     id: 'ceremonies',
-    title: 'Décoration de Cérémonies',
-    description: 'Décoration solennelle et respectueuse pour vos cérémonies religieuses et événements officiels.',
+    title: 'Decoration de ceremonies',
+    description:
+      'Un decor respectueux et soigne pour vos ceremonies religieuses ou officielles, avec une attention particuliere portee aux symboles.',
     features: [
-      'Décoration d\'églises et mosquées',
-      'Arches de cérémonie',
-      'Décoration de salles de prière',
-      'Éclairage solennel',
-      'Décoration d\'entrée',
-      'Zones de recueillement'
+      'Amenagement de l espace principal',
+      'Traits de lumiere et textiles sobres',
+      'Espaces d accueil et de recueillement',
+      'Coordination des elements floraux et accessoires',
+      'Presence discrete de l equipe pendant l installation',
     ],
-    icon: '🕊️',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image:
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+    signature: 'Sobriete elegante',
   },
   {
     id: 'corporate',
-    title: 'Événements d\'Entreprise',
-    description: 'Décoration professionnelle pour vos événements d\'entreprise, séminaires et lancements de produits.',
+    title: 'Evenements d entreprise',
+    description:
+      'Des espaces a l image de votre marque pour vos conferences, lancements de produits et rencontres clients ou collaborateurs.',
     features: [
-      'Décoration de salles de conférence',
-      'Stands et zones d\'exposition',
-      'Décoration de réceptions',
-      'Éclairage professionnel',
-      'Branding et personnalisation',
-      'Zones de networking'
+      'Scenographie globale et zoning des espaces',
+      'Mise en avant de votre identite visuelle',
+      'Mobilier, fleurs et eclairages coordonnes',
+      'Accompagnement technique et logistique',
+      'Pilotage des fournisseurs partenaires',
     ],
-    icon: '🏢',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image:
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+    signature: 'Impact professionnel',
   },
   {
     id: 'graduations',
-    title: 'Cérémonies de Remise de Diplômes',
-    description: 'Célébrez les réussites académiques avec une décoration élégante et festive.',
+    title: 'Ceremonies de remise de diplomes',
+    description:
+      'Mise en scene ceremonielle et festive pour honorer les parcours academiques et offrir un cadre photo ideal.',
     features: [
-      'Décoration de salles de cérémonie',
-      'Arches de remise de diplômes',
-      'Zones photos avec accessoires',
-      'Décoration de tables de buffet',
-      'Éclairage festif',
-      'Décoration d\'entrée'
+      'Espace scene et podium',
+      'Arriere-plans et signaletique personnalises',
+      'Zones photos pour les diplomes',
+      'Decor des espaces de reception',
+      'Coordination logistique sur place',
     ],
-    icon: '🎓',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+    signature: 'Celebration academique',
   },
   {
     id: 'custom',
-    title: 'Événements Sur Mesure',
-    description: 'Nous créons des décors uniques pour tous types d\'événements spéciaux selon vos besoins.',
+    title: 'Evenements sur mesure',
+    description:
+      'Pour toute demande unique ou hors format, nous construisons un decor integre qui repond a vos attentes et contraintes.',
     features: [
-      'Consultation personnalisée',
-      'Design sur mesure',
-      'Thématiques originales',
-      'Décoration complète',
-      'Coordination avec fournisseurs',
-      'Suivi jusqu\'au jour J'
+      'Atelier d idees et curation sur mesure',
+      'Propositions graphiques et maquettes',
+      'Selection de materiaux et accessoires',
+      'Coordination integrale avec vos prestataires',
+      'Pilotage complet jusqu au demontage',
     ],
-    icon: '✨',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
+    image:
+      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+    signature: 'Signature exclusive',
+  },
 ]
 
 export const ServicesList = (): JSX.Element => {
   return (
-    <div className="space-y-16 mb-20">
-      {services.map((service, index) => (
-        <div
-          key={service.id}
-          id={service.id}
-          className={`flex flex-col lg:flex-row gap-8 items-center ${
-            index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-          }`}
-        >
-          {/* Image */}
-          <div className="lg:w-1/2">
-            <div className="relative overflow-hidden rounded-xl shadow-2xl">
-              <div className="relative aspect-video">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
-                
-                {/* Icon Overlay */}
-                <div className="absolute top-4 right-4 bg-red-600/90 backdrop-blur-sm rounded-full p-4 shadow-lg">
-                  <span className="text-3xl">{service.icon}</span>
-                </div>
-              </div>
+    <div className="space-y-20">
+      {services.map((service, index) => {
+        const isReversed = index % 2 === 1
+        return (
+          <section
+            key={service.id}
+            id={service.id}
+            className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2"
+          >
+            <div
+              className={`relative overflow-hidden rounded-[32px] border border-neutral-200 bg-white/85 shadow-lg ${
+                isReversed ? 'lg:order-2' : ''
+              }`}
+            >
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/35 via-transparent to-white/10" />
             </div>
-          </div>
+            <div className="flex items-center justify-between px-6 py-5">
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                {service.signature}
+              </span>
+              <span className="text-xs uppercase tracking-[0.35em] text-neutral-400">
+                Perfect Events
+              </span>
+            </div>
+            </div>
 
-          {/* Content */}
-          <div className="lg:w-1/2 space-y-6">
+            <div className={`space-y-6 ${isReversed ? 'lg:order-1' : ''}`}>
             <div>
-              <h2 className="text-3xl font-elegant font-bold text-white mb-4">
+              <h2 className="text-3xl font-elegant font-semibold text-neutral-900">
                 {service.title}
               </h2>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="mt-4 text-sm leading-relaxed text-neutral-600">
                 {service.description}
               </p>
             </div>
 
-            {/* Features */}
             <div>
-              <h3 className="text-xl font-semibold text-red-400 mb-4">
-                Ce qui est inclus :
-              </h3>
-              <ul className="space-y-3">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-5 h-5 bg-red-600 rounded-full flex items-center justify-center mt-0.5">
-                      <svg
-                        className="w-3 h-3 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
+              <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                Compris dans la prestation
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-neutral-600">
+                {service.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
                 ))}
               </ul>
             </div>
 
-            {/* CTA */}
-            <div className="pt-4">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-300 focus:ring-opacity-50">
-                Demander un Devis
+            <div>
+              <button
+                type="button"
+                className="rounded-full border border-neutral-400 px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-700 transition-colors duration-200 hover:border-neutral-700 hover:text-neutral-900"
+              >
+                Demander un devis
               </button>
             </div>
-          </div>
-        </div>
-      ))}
+            </div>
+          </section>
+        )
+      })}
     </div>
   )
-} 
+}
