@@ -26,7 +26,7 @@ const services: ServiceCard[] = [
     description:
       'Style intemporel avec bois noble et finitions raffinees pour une cuisine chaleureuse et traditionnelle.',
     highlight: 'Tradition et qualite',
-    image: '',
+    image: '/picturs/7.jpg',
     href: '/services#cuisine-classique',
   },
   {
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
     description:
       'Transformation totale de votre cuisine, de la demolition a la finition, pour un resultat cles en main.',
     highlight: 'Renovation cles en main',
-    image: '',
+    image: '/picturs/2.jpg',
     href: '/services#renovation-complete',
   },
 ]

@@ -38,8 +38,7 @@ const services: Service[] = [
       'Plans de travail en granit ou marbre',
       'Fabrication artisanale sur mesure',
     ],
-    image:
-      '',
+    image: '/picturs/7.jpg',
     signature: 'Tradition et qualite',
   },
   {
@@ -86,8 +85,7 @@ const services: Service[] = [
       'Tiroirs et portes a fermeture douce',
       'Fabrication locale et garantie',
     ],
-    image:
-      '',
+    image: '/picturs/10.jpg',
     signature: 'Menuiserie d art',
   },
   {
@@ -102,8 +100,7 @@ const services: Service[] = [
       'Installation complete de la cuisine',
       'Suivi et garantie de finition',
     ],
-    image:
-      '',
+    image: '/picturs/2.jpg',
     signature: 'Renovation cles en main',
   },
 ]
