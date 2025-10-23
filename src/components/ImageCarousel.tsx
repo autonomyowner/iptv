@@ -53,7 +53,7 @@ export const ImageCarousel = (): JSX.Element => {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-kitchen-lux-dark-green-700">
             Découvrez quelques-unes de nos créations qui transforment les espaces
-            en lieux d'exception pour vos événements.
+            en lieux d&apos;exception pour vos événements.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export const ImageCarousel = (): JSX.Element => {
               5+
             </p>
             <p className="mt-2 text-sm uppercase tracking-[0.35em] text-kitchen-lux-dark-green-600">
-              Années d'expérience
+              Années d&apos;expérience
             </p>
           </div>
           <div className="rounded-3xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 px-6 py-8">
