@@ -53,8 +53,7 @@ const services: Service[] = [
       'Integration d ilots et peninsules',
       'Conception modulaire et evolutive',
     ],
-    image:
-      '',
+    image: '/picturs/9.jpg',
     signature: 'Optimisation espace',
   },
   {
@@ -69,8 +68,7 @@ const services: Service[] = [
       'Decoupe et usinage precis',
       'Pose et finition professionnelle',
     ],
-    image:
-      '',
+    image: '/picturs/7.jpg',
     signature: 'Materiaux nobles',
   },
   {
