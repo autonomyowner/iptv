@@ -86,7 +86,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="pt-20 md:pt-24 pb-20">{children}</main>
-        <footer className="bg-kitchen-footer-dark/80 backdrop-blur-md border-t border-kitchen-footer-dark/20 text-kitchen-white-clean py-4">
+        <footer className="bg-kitchen-lux-dark-green-800 backdrop-blur-md border-t border-kitchen-lux-dark-green-800/20 text-kitchen-white-clean py-4">
           <div className="container mx-auto px-4 text-center">
             <p className="text-sm">
               Made by{' '}
