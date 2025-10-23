@@ -17,11 +17,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
+  title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
   description:
-    'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
+    'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
   keywords:
-    'cuisine moderne, fabrication cuisine, menuiserie, Tlemcen, cuisine sur mesure, amenagement cuisine, plans de travail',
+    'cuisine moderne, fabrication cuisine, menuiserie, Bouzareah, cuisine sur mesure, amenagement cuisine, plans de travail',
   authors: [{ name: 'Cuisine Alger' }],
   creator: 'Cuisine Alger',
   publisher: 'Cuisine Alger',
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
+    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
     description:
-      'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
+      'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
     url: 'https://cuisine-alger.com',
     siteName: 'Cuisine Alger',
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
+        alt: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
       },
     ],
     locale: 'fr_DZ',
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
+    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
     description:
-      'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
+      'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
     images: ['/og-image.jpg'],
   },
   robots: {

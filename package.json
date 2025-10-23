@@ -1,7 +1,7 @@
 {
   "name": "cuisine-alger",
   "version": "1.0.0",
-  "description": "Cuisine Alger - Décoration événementielle à Tlemcen",
+  "description": "Cuisine Alger - Décoration événementielle à Bouzareah",
   "private": true,
   "scripts": {
     "dev": "next dev",

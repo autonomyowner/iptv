@@ -13,7 +13,7 @@ export const AboutHero = (): JSX.Element => {
                 L equipe Cuisine Alger maitrise l art de la menuiserie moderne
               </h1>
               <p className="mt-4 text-base leading-relaxed text-neutral-600">
-                Basee a Tlemcen, Cuisine Alger concoit et fabrique des cuisines sur mesure
+                Basee a Bouzareah, Cuisine Alger concoit et fabrique des cuisines sur mesure
                 avec un savoir-faire artisanal et des materiaux de qualite. Nous transformons
                 vos espaces grace a notre expertise en menuiserie et notre attention aux details.
               </p>

@@ -1,6 +1,6 @@
 # Cuisine Alger ❤️ - Website
 
-Un site web moderne et élégant pour Cuisine Alger, une entreprise de conception et fabrication de cuisines modernes basée à Tlemcen, Algérie.
+Un site web moderne et élégant pour Cuisine Alger, une entreprise de conception et fabrication de cuisines modernes basée à Bouzareah, Algérie.
 
 ## 🚀 Technologies Utilisées
 
@@ -97,12 +97,12 @@ Le thème utilise un gradient élégant :
 - **WhatsApp** : +213 123 456 789
 - **Téléphone** : +213 123 456 789
 - **Email** : contact@cuisine-alger.com
-- **Localisation** : Tlemcen, Algérie
+- **Localisation** : Bouzareah, Algérie
 
 ### Zone de Service
-- Tlemcen Centre
-- Tlemcen Ouest
-- Tlemcen Est
+- Bouzareah Centre
+- Bouzareah Ouest
+- Bouzareah Est
 - Aïn Témouchent
 - Oran (sur demande)
 - Mostaganem (sur demande)
@@ -118,7 +118,7 @@ NEXT_PUBLIC_EMAIL=contact@cuisine-alger.com
 ```
 
 ### SEO
-- Métadonnées optimisées pour "Conception et fabrication de cuisines modernes à Tlemcen"
+- Métadonnées optimisées pour "Conception et fabrication de cuisines modernes à Bouzareah"
 - OpenGraph tags pour les réseaux sociaux
 - Structure de données pour Google
 

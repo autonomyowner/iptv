@@ -1,7 +1,7 @@
 const serviceAreas = [
-  'Tlemcen centre',
-  'Tlemcen ouest',
-  'Tlemcen est',
+  'Bouzareah centre',
+  'Bouzareah ouest',
+  'Bouzareah est',
   'Ain Temouchent',
   'Oran (sur demande)',
   'Mostaganem (sur demande)',
@@ -15,7 +15,7 @@ export const LocationMap = (): JSX.Element => {
           Zone de service
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-neutral-600">
-          Nous intervenons principalement a Tlemcen et sur demande dans les
+          Nous intervenons principalement a Bouzareah et sur demande dans les
           villes voisines. Pour tout projet hors zone, contactez-nous afin
           d evaluer la faisabilite et les frais eventuels.
         </p>
@@ -47,7 +47,7 @@ export const LocationMap = (): JSX.Element => {
           <div>
             <p className="font-semibold text-neutral-900">Adresse</p>
             <p className="mt-1">
-              Tlemcen, Wilaya de Tlemcen
+              Bouzareah, Wilaya de Bouzareah
               <br />
               Algerie
             </p>
