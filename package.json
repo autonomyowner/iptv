@@ -1,7 +1,7 @@
 {
-  "name": "perfect-events",
+  "name": "cuisine-alger",
   "version": "1.0.0",
-  "description": "Perfect Events - Décoration événementielle à Tlemcen",
+  "description": "Cuisine Alger - Décoration événementielle à Tlemcen",
   "private": true,
   "scripts": {
     "dev": "next dev",

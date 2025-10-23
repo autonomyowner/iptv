@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 export const AboutHero = (): JSX.Element => {
   return (
@@ -11,13 +10,12 @@ export const AboutHero = (): JSX.Element => {
                 A propos
               </p>
               <h1 className="mt-5 text-4xl font-elegant font-semibold text-neutral-900 sm:text-5xl">
-                L equipe Perfect Events cultive le sens du detail
+                L equipe Cuisine Alger maitrise l art de la menuiserie moderne
               </h1>
               <p className="mt-4 text-base leading-relaxed text-neutral-600">
-                Basee a Tlemcen, Perfect Events imagine des decorums sur mesure
-                pour des celebrations qui marquent les esprits. Nous mettons en
-                scene votre histoire grace a un jeu de textures, de lumieres et
-                d accessoires selectionnes avec soin.
+                Basee a Tlemcen, Cuisine Alger concoit et fabrique des cuisines sur mesure
+                avec un savoir-faire artisanal et des materiaux de qualite. Nous transformons
+                vos espaces grace a notre expertise en menuiserie et notre attention aux details.
               </p>
             </div>
 
@@ -27,9 +25,8 @@ export const AboutHero = (): JSX.Element => {
                   Notre histoire
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                  Depuis plus de trois ans, nous accompagnons mariages,
-                  anniversaires et rencontres professionnelles avec un regard
-                  contemporain et une grande exigence qualitative.
+                  Depuis plus de cinq ans, nous concevons et fabriquons des cuisines
+                  sur mesure avec un savoir-faire artisanal et une grande exigence qualitative.
                 </p>
               </div>
               <div>
@@ -37,8 +34,8 @@ export const AboutHero = (): JSX.Element => {
                   Notre promesse
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                  Offrir des decorums coherents et fluides, du premier croquis a
-                  l installation finale, pour une experience sans stress et
+                  Offrir des cuisines fonctionnelles et esthetiques, de la conception 3D
+                  a l installation finale, pour une experience sans stress et
                   parfaitement orchestree.
                 </p>
               </div>
@@ -47,15 +44,15 @@ export const AboutHero = (): JSX.Element => {
             <div className="grid grid-cols-3 gap-6 border-t border-neutral-200 pt-6">
               <div>
                 <p className="text-3xl font-elegant font-semibold text-neutral-900">
-                  100+
+                  50+
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-[0.35em] text-neutral-500">
-                  Evenements
+                  Cuisines
                 </p>
               </div>
               <div>
                 <p className="text-3xl font-elegant font-semibold text-neutral-900">
-                  3+
+                  5+
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-[0.35em] text-neutral-500">
                   Annees
@@ -63,10 +60,10 @@ export const AboutHero = (): JSX.Element => {
               </div>
               <div>
                 <p className="text-3xl font-elegant font-semibold text-neutral-900">
-                  Equipe
+                  Artisans
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-[0.35em] text-neutral-500">
-                  Dediee
+                  Qualifies
                 </p>
               </div>
             </div>
@@ -74,22 +71,19 @@ export const AboutHero = (): JSX.Element => {
 
           <div className="relative">
             <div className="relative overflow-hidden rounded-[32px] border border-neutral-200 bg-white/80 shadow-lg">
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
-                  alt="Equipe Perfect Events"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/10" />
+              <div className="relative aspect-[4/5] bg-neutral-100 flex items-center justify-center">
+                <div className="text-center text-neutral-400">
+                  <div className="text-6xl mb-4">👥</div>
+                  <p className="text-lg">Équipe à venir</p>
+                </div>
               </div>
             </div>
             <div className="absolute -bottom-8 left-1/2 w-60 -translate-x-1/2 rounded-3xl border border-neutral-200 bg-white/95 px-6 py-5 text-center shadow-lg">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                Atelier creatif
+                Atelier de fabrication
               </p>
               <p className="mt-3 text-sm text-neutral-600">
-                Materiaux nobles et mise en scene sur mesure pour chaque projet.
+                Materiaux nobles et fabrication sur mesure pour chaque cuisine.
               </p>
             </div>
           </div>

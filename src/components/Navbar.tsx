@@ -11,9 +11,7 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: 'Accueil', href: '/' },
-  { label: 'Galerie', href: '/gallery' },
   { label: 'Services', href: '/services' },
-  { label: 'A Propos', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -43,7 +41,7 @@ export const Navbar = (): JSX.Element => {
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? 'bg-white/92 backdrop-blur border-b border-neutral-200 shadow-sm'
+          ? 'bg-kitchen-white-clean/92 backdrop-blur border-b border-kitchen-marble-gray-light shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -51,13 +49,13 @@ export const Navbar = (): JSX.Element => {
         <div className="flex h-16 items-center justify-between md:h-20">
           <Link
             href="/"
-            className="flex flex-col leading-tight text-neutral-900 transition-colors duration-200 hover:text-amber-700"
+            className="flex flex-col leading-tight text-kitchen-black-deep transition-colors duration-200 hover:text-kitchen-marble-gray"
           >
             <span className="text-xl font-semibold tracking-wide uppercase">
-              Perfect Events
+              Cuisine Alger
             </span>
-            <span className="text-xs font-light text-neutral-500">
-              Decoration evennementielle
+            <span className="text-xs font-light text-kitchen-marble-gray">
+              Conception et fabrication de cuisines
             </span>
           </Link>
 
@@ -70,8 +68,8 @@ export const Navbar = (): JSX.Element => {
                   href={item.href}
                   className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-200 ${
                     isActive
-                      ? 'text-amber-700'
-                      : 'text-neutral-500 hover:text-neutral-900'
+                      ? 'text-kitchen-black-deep'
+                      : 'text-kitchen-marble-gray hover:text-kitchen-black-deep'
                   }`}
                 >
                   {item.label}
@@ -82,7 +80,7 @@ export const Navbar = (): JSX.Element => {
 
           <button
             onClick={toggleMobileMenu}
-            className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-neutral-700 transition-colors duration-200 hover:border-neutral-500 hover:text-neutral-900 md:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-kitchen-lux-dark-green-300 bg-gradient-to-r from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-kitchen-lux-dark-green-800 transition-all duration-200 hover:border-kitchen-lux-dark-green-500 hover:bg-gradient-to-r hover:from-kitchen-lux-dark-green-100 hover:to-kitchen-lux-dark-green-200 hover:text-kitchen-lux-dark-green-900 hover:shadow-md hover:shadow-kitchen-lux-dark-green-200/30 md:hidden"
             aria-expanded={isMobileMenuOpen}
             aria-label="Basculer la navigation"
             type="button"
@@ -96,7 +94,7 @@ export const Navbar = (): JSX.Element => {
             isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="mb-4 rounded-2xl border border-neutral-200 bg-white/95 px-3 pb-4 pt-2 backdrop-blur">
+          <div className="mb-4 rounded-2xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 px-3 pb-4 pt-2 backdrop-blur shadow-lg shadow-kitchen-lux-dark-green-200/20">
             <div className="grid gap-2">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
@@ -104,10 +102,10 @@ export const Navbar = (): JSX.Element => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-full px-4 py-3 text-sm font-medium uppercase tracking-[0.2em] transition-colors duration-200 ${
+                    className={`rounded-full px-4 py-3 text-sm font-medium uppercase tracking-[0.2em] transition-all duration-200 ${
                       isActive
-                        ? 'bg-amber-100 text-amber-800'
-                        : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900'
+                        ? 'bg-kitchen-lux-dark-green-200 text-kitchen-lux-dark-green-900 shadow-sm'
+                        : 'text-kitchen-lux-dark-green-700 hover:bg-kitchen-lux-dark-green-200 hover:text-kitchen-lux-dark-green-900 hover:shadow-sm'
                     }`}
                   >
                     {item.label}

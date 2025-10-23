@@ -6,9 +6,21 @@
 
 :root {
   color-scheme: light;
-  --page-bg-start: #f9f7f2;
-  --page-bg-end: #f1ebe4;
-  --page-foreground: 28, 27, 30;
+  /* Modern Kitchen Color Palette */
+  --white-clean: #FFFFFF;
+  --white-soft: #F0F0F0;
+  --black-deep: #000000;
+  --black-soft: #1A1A1A;
+  --marble-gray: #B0B0B0;
+  --marble-gray-light: #C8C8C8;
+  --warm-light: #FFF7E6;
+  --warm-light-soft: #FFECD6;
+  --footer-dark: #1C4831;
+  
+  /* Legacy variables for compatibility */
+  --page-bg-start: var(--white-clean);
+  --page-bg-end: var(--white-soft);
+  --page-foreground: 26, 26, 26;
 }
 
 * {
@@ -38,7 +50,12 @@ a {
 
 /* Custom gradient utility */
 .bg-gradient-elegant {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(239, 233, 226, 0.82));
+  background: linear-gradient(145deg, var(--white-clean), var(--white-soft));
+}
+
+/* Modern kitchen gradient */
+.bg-gradient-kitchen {
+  background: linear-gradient(135deg, var(--white-clean), var(--warm-light));
 }
 
 /* Smooth scrolling */
@@ -52,14 +69,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e5ded5;
+  background: var(--white-soft);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b58f66;
+  background: var(--marble-gray);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a5794b;
+  background: var(--black-soft);
 } 

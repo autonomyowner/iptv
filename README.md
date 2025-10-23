@@ -1,6 +1,6 @@
-# Perfect Events ❤️ - Website
+# Cuisine Alger ❤️ - Website
 
-Un site web moderne et élégant pour Perfect Events, une entreprise de décoration événementielle basée à Tlemcen, Algérie.
+Un site web moderne et élégant pour Cuisine Alger, une entreprise de conception et fabrication de cuisines modernes basée à Tlemcen, Algérie.
 
 ## 🚀 Technologies Utilisées
 
@@ -20,9 +20,7 @@ Un site web moderne et élégant pour Perfect Events, une entreprise de décorat
 
 ### 📱 Pages
 - **Accueil** - Hero section avec CTA, aperçu des services, témoignages
-- **Galerie** - Grille de photos avec lightbox interactif
-- **Services** - Détails complets des services offerts
-- **À Propos** - Histoire, valeurs, équipe
+- **Services** - Détails complets des services de cuisine
 - **Contact** - Informations de contact et zone de service
 
 ### 🔧 Fonctionnalités Techniques
@@ -98,7 +96,7 @@ Le thème utilise un gradient élégant :
 ### Informations de Contact
 - **WhatsApp** : +213 123 456 789
 - **Téléphone** : +213 123 456 789
-- **Email** : contact@perfect-events-tlemcen.com
+- **Email** : contact@cuisine-alger.com
 - **Localisation** : Tlemcen, Algérie
 
 ### Zone de Service
@@ -114,13 +112,13 @@ Le thème utilise un gradient élégant :
 ### Variables d'Environnement
 Créez un fichier `.env.local` :
 ```env
-NEXT_PUBLIC_SITE_URL=https://perfect-events-tlemcen.com
-NEXT_PUBLIC_PHONE_NUMBER=+213123456789
-NEXT_PUBLIC_EMAIL=contact@perfect-events-tlemcen.com
+NEXT_PUBLIC_SITE_URL=https://cuisine-alger.com
+NEXT_PUBLIC_PHONE_NUMBER=+213779797904
+NEXT_PUBLIC_EMAIL=contact@cuisine-alger.com
 ```
 
 ### SEO
-- Métadonnées optimisées pour "Décoration événementielle à Tlemcen"
+- Métadonnées optimisées pour "Conception et fabrication de cuisines modernes à Tlemcen"
 - OpenGraph tags pour les réseaux sociaux
 - Structure de données pour Google
 
@@ -164,4 +162,4 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
-**Perfect Events ❤️** - Transformez vos événements en moments inoubliables 
+**Cuisine Alger ❤️** - Transformez votre cuisine en espace de vie idéal 

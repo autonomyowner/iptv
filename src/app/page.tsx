@@ -1,16 +1,15 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { HeroSection } from '@/components/HeroSection'
 import { ServicesPreview } from '@/components/ServicesPreview'
-import { TestimonialsSection } from '@/components/TestimonialsSection'
+import { ImageCarousel } from '@/components/ImageCarousel'
 import { CTASection } from '@/components/CTASection'
 
 export default function HomePage(): JSX.Element {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100">
       <HeroSection />
       <ServicesPreview />
-      <TestimonialsSection />
+      <ImageCarousel />
       <CTASection />
     </div>
   )

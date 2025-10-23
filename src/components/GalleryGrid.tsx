@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 
 type GalleryItem = {
   id: string
@@ -17,7 +16,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Mariage elegant',
     category: 'Mariage',
     image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Decor romantique avec compositions florales suspendues et mise en lumiere douce.',
   },
@@ -26,7 +25,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Anniversaire 50 ans',
     category: 'Anniversaire',
     image:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Atmosphere chaleureuse aux tons caramel avec bar a douceurs personnalise.',
   },
@@ -35,7 +34,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Ceremonie religieuse',
     category: 'Ceremonie',
     image:
-      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Espace solennel et epure, respect des traditions et mise en avant des symboles.',
   },
@@ -44,7 +43,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Mariage traditionnel',
     category: 'Mariage',
     image:
-      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Alliance de touches traditionnelles et contemporaines pour une ambiance chaleureuse.',
   },
@@ -53,7 +52,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Anniversaire enfant',
     category: 'Anniversaire',
     image:
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Univers ludique et colore avec zones de jeux et buffet personalise.',
   },
@@ -62,7 +61,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Ceremonie officielle',
     category: 'Ceremonie',
     image:
-      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Mise en scene precise pour un evenement institutionnel avec accueil des invites.',
   },
@@ -71,7 +70,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Mariage moderne',
     category: 'Mariage',
     image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Design contemporain, melange de structures metalliques et de fleurs delicates.',
   },
@@ -80,7 +79,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Anniversaire adulte',
     category: 'Anniversaire',
     image:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Reception chic avec bar signature et scenographie lumineuse.',
   },
@@ -89,7 +88,7 @@ const galleryItems: GalleryItem[] = [
     title: 'Ceremonie familiale',
     category: 'Ceremonie',
     image:
-      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      '',
     description:
       'Decor intime pour une reunion familiale avec espaces lounges accueillants.',
   },
@@ -162,25 +161,22 @@ export const GalleryGrid = (): JSX.Element => {
             key={item.id}
             type="button"
             onClick={() => handleImageClick(item)}
-            className="group relative overflow-hidden rounded-3xl border border-neutral-200 bg-white/80 text-left shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+            className="group relative overflow-hidden rounded-3xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 text-left shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-kitchen-lux-dark-green-200/20"
           >
-            <div className="relative aspect-square">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/30 via-transparent to-transparent" />
+            <div className="relative aspect-square bg-neutral-100 flex items-center justify-center">
+              <div className="text-center text-neutral-400">
+                <div className="text-6xl mb-4">📸</div>
+                <p className="text-lg">Image à venir</p>
+              </div>
               <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/80">
+                <p className="text-xs uppercase tracking-[0.3em] text-kitchen-lux-dark-green-600">
                   {item.category}
                 </p>
-                <p className="text-lg font-elegant font-semibold text-white">
+                <p className="text-lg font-elegant font-semibold text-kitchen-lux-dark-green-800">
                   {item.title}
                 </p>
-                <p className="text-sm text-white/80">{item.description}</p>
-                <span className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70 underline underline-offset-4">
+                <p className="text-sm text-kitchen-lux-dark-green-700">{item.description}</p>
+                <span className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-kitchen-lux-dark-green-600 underline underline-offset-4 group-hover:text-kitchen-lux-dark-green-500 transition-colors duration-200">
                   Voir le projet
                 </span>
               </div>
@@ -217,14 +213,11 @@ export const GalleryGrid = (): JSX.Element => {
                 </button>
               </div>
             </div>
-            <div className="mt-6 overflow-hidden rounded-2xl">
-              <Image
-                src={selectedImage.image}
-                alt={selectedImage.title}
-                width={1200}
-                height={800}
-                className="w-full object-cover"
-              />
+            <div className="mt-6 overflow-hidden rounded-2xl bg-neutral-100 h-96 flex items-center justify-center">
+              <div className="text-center text-neutral-400">
+                <div className="text-8xl mb-4">📸</div>
+                <p className="text-xl">Image à venir</p>
+              </div>
             </div>
             <div className="mt-6 rounded-2xl bg-neutral-900/70 px-6 py-5 text-neutral-100">
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-300">

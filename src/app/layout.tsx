@@ -17,35 +17,35 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+  title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
   description:
-    'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
+    'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
   keywords:
-    'decoration evennementielle, Tlemcen, evenements, mariage, anniversaire, ceremonie, organisation',
-  authors: [{ name: 'Perfect Events' }],
-  creator: 'Perfect Events',
-  publisher: 'Perfect Events',
+    'cuisine moderne, fabrication cuisine, menuiserie, Tlemcen, cuisine sur mesure, amenagement cuisine, plans de travail',
+  authors: [{ name: 'Cuisine Alger' }],
+  creator: 'Cuisine Alger',
+  publisher: 'Cuisine Alger',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://perfect-events-tlemcen.com'),
+  metadataBase: new URL('https://cuisine-alger.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
     description:
-      'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
-    url: 'https://perfect-events-tlemcen.com',
-    siteName: 'Perfect Events',
+      'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
+    url: 'https://cuisine-alger.com',
+    siteName: 'Cuisine Alger',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Perfect Events - Decoration evennementielle a Tlemcen',
+        alt: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
       },
     ],
     locale: 'fr_DZ',
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Perfect Events - Decoration evennementielle a Tlemcen',
+    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Tlemcen',
     description:
-      'Decoration evennementielle et organisation d evenements a Tlemcen. Services personnalises et elegants pour vos moments speciaux.',
+      'Conception et fabrication de cuisines modernes a Tlemcen. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -86,7 +86,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="pt-20 md:pt-24 pb-20">{children}</main>
-        <footer className="bg-slate-900 text-white py-4">
+        <footer className="bg-kitchen-footer-dark/80 backdrop-blur-md border-t border-kitchen-footer-dark/20 text-kitchen-white-clean py-4">
           <div className="container mx-auto px-4 text-center">
             <p className="text-sm">
               Made by{' '}
@@ -94,7 +94,7 @@ export default function RootLayout({
                 href="https://www.sitedz.store"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors underline"
+                className="text-kitchen-warm-light hover:text-kitchen-warm-light-soft transition-colors underline"
               >
                 www.sitedz.store
               </a>
