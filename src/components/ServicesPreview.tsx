@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type ServiceCard = {
   id: string
@@ -16,7 +17,7 @@ const services: ServiceCard[] = [
     description:
       'Design contemporain aux lignes epurees avec materiaux haut de gamme pour une cuisine fonctionnelle.',
     highlight: 'Design contemporain',
-    image: '',
+    image: '/picturs/3.jpg',
     href: '/services#cuisine-moderne',
   },
   {
@@ -64,10 +65,19 @@ export const ServicesPreview = (): JSX.Element => {
               className="group relative block overflow-hidden rounded-3xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-kitchen-lux-dark-green-200/20"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 flex items-center justify-center">
-                <div className="text-center text-neutral-400">
-                  <div className="text-4xl mb-2">📸</div>
-                  <p className="text-sm">Image à venir</p>
-                </div>
+                {service.image ? (
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="text-center text-neutral-400">
+                    <div className="text-4xl mb-2">📸</div>
+                    <p className="text-sm">Image à venir</p>
+                  </div>
+                )}
               </div>
 
               <div className="flex h-full flex-col gap-5 p-6">
