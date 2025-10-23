@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 type NavItem = {
@@ -49,14 +50,25 @@ export const Navbar = (): JSX.Element => {
         <div className="flex h-16 items-center justify-between md:h-20">
           <Link
             href="/"
-            className="flex flex-col leading-tight text-kitchen-black-deep transition-colors duration-200 hover:text-kitchen-marble-gray"
+            className="flex items-center space-x-3 transition-opacity duration-200 hover:opacity-80"
           >
-            <span className="text-xl font-semibold tracking-wide uppercase">
-              Cuisine Alger
-            </span>
-            <span className="text-xs font-light text-kitchen-marble-gray">
-              Conception et fabrication de cuisines
-            </span>
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/picturs/logo.png"
+                alt="Cuisine Alger Logo"
+                fill
+                className="object-contain rounded-full"
+                priority
+              />
+            </div>
+            <div className="flex flex-col leading-tight text-kitchen-black-deep">
+              <span className="text-xl font-semibold tracking-wide uppercase">
+                Cuisine Alger
+              </span>
+              <span className="text-xs font-light text-kitchen-marble-gray">
+                Conception et fabrication de cuisines
+              </span>
+            </div>
           </Link>
 
           <div className="hidden items-center space-x-7 md:flex">
