@@ -100,12 +100,12 @@ Le thème utilise un gradient élégant :
 - **Localisation** : Bouzareah, Algérie
 
 ### Zone de Service
-- Bouzareah Centre
-- Bouzareah Ouest
-- Bouzareah Est
-- Aïn Témouchent
-- Oran (sur demande)
-- Mostaganem (sur demande)
+- Toutes les 58 wilayas d'Algérie
+- Alger et région
+- Oran et région
+- Constantine et région
+- Annaba et région
+- Autres wilayas sur demande
 
 ## 🔧 Configuration
 
@@ -118,7 +118,7 @@ NEXT_PUBLIC_EMAIL=contact@cuisine-alger.com
 ```
 
 ### SEO
-- Métadonnées optimisées pour "Conception et fabrication de cuisines modernes à Bouzareah"
+- Métadonnées optimisées pour "Conception et fabrication de cuisines modernes dans toute l'Algérie"
 - OpenGraph tags pour les réseaux sociaux
 - Structure de données pour Google
 

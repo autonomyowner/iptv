@@ -1,10 +1,10 @@
 const serviceAreas = [
-  'Bouzareah centre',
-  'Bouzareah ouest',
-  'Bouzareah est',
-  'Ain Temouchent',
-  'Oran (sur demande)',
-  'Mostaganem (sur demande)',
+  'Toutes les 58 wilayas',
+  'Alger et région',
+  'Oran et région',
+  'Constantine et région',
+  'Annaba et région',
+  'Autres wilayas sur demande',
 ]
 
 export const LocationMap = (): JSX.Element => {
@@ -15,9 +15,9 @@ export const LocationMap = (): JSX.Element => {
           Zone de service
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-neutral-600">
-          Nous intervenons principalement a Bouzareah et sur demande dans les
-          villes voisines. Pour tout projet hors zone, contactez-nous afin
-          d evaluer la faisabilite et les frais eventuels.
+          Nous intervenons dans toutes les 58 wilayas d'Algérie. 
+          Pour tout projet, contactez-nous afin d'évaluer la faisabilité 
+          et les frais de déplacement selon votre localisation.
         </p>
         <div className="mt-6 grid grid-cols-1 gap-3 text-sm text-neutral-600 sm:grid-cols-2">
           {serviceAreas.map((area) => (
@@ -30,7 +30,7 @@ export const LocationMap = (): JSX.Element => {
           ))}
         </div>
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-neutral-500">
-          Deplacements longs sur devis supplementaire
+          Frais de déplacement selon la distance
         </p>
       </div>
 
@@ -38,31 +38,39 @@ export const LocationMap = (): JSX.Element => {
         <h3 className="text-lg font-semibold text-neutral-900">
           Notre localisation
         </h3>
-        <div className="mt-6 h-64 rounded-2xl border border-neutral-200 bg-neutral-100/70">
-          <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.3em] text-neutral-500">
-            Carte interactive bientot disponible
-          </div>
+        <div className="mt-6 h-64 rounded-2xl border border-neutral-200 overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localisation Cuisine Alger"
+            className="w-full h-full"
+          />
         </div>
         <div className="mt-6 grid gap-4 text-sm text-neutral-600">
           <div>
             <p className="font-semibold text-neutral-900">Adresse</p>
             <p className="mt-1">
-              Bouzareah, Wilaya de Bouzareah
+              Cuisine Alger
               <br />
-              Algerie
+              Bouzareah, Alger, Algérie
             </p>
           </div>
           <div>
-            <p className="font-semibold text-neutral-900">Accessibilite</p>
+            <p className="font-semibold text-neutral-900">Accessibilité</p>
             <p className="mt-1">
-              Acces facile en voiture, possibilite de parking sur demande.
+              Accès facile en voiture, possibilité de parking sur demande.
             </p>
           </div>
           <div>
             <p className="font-semibold text-neutral-900">Couverture</p>
             <p className="mt-1">
-              Intervention dans un rayon de 50 km, extensions possibles avec
-              frais de deplacement.
+              Intervention dans toutes les 58 wilayas d'Algérie avec 
+              frais de déplacement selon la distance.
             </p>
           </div>
         </div>
