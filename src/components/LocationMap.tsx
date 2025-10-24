@@ -15,8 +15,8 @@ export const LocationMap = (): JSX.Element => {
           Zone de service
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-neutral-600">
-          Nous intervenons dans toutes les 58 wilayas d'Algérie. 
-          Pour tout projet, contactez-nous afin d'évaluer la faisabilité 
+          Nous intervenons dans toutes les 58 wilayas d&apos;Algérie. 
+          Pour tout projet, contactez-nous afin d&apos;évaluer la faisabilité 
           et les frais de déplacement selon votre localisation.
         </p>
         <div className="mt-6 grid grid-cols-1 gap-3 text-sm text-neutral-600 sm:grid-cols-2">
@@ -69,7 +69,7 @@ export const LocationMap = (): JSX.Element => {
           <div>
             <p className="font-semibold text-neutral-900">Couverture</p>
             <p className="mt-1">
-              Intervention dans toutes les 58 wilayas d'Algérie avec 
+              Intervention dans toutes les 58 wilayas d&apos;Algérie avec 
               frais de déplacement selon la distance.
             </p>
           </div>

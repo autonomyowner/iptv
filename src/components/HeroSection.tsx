@@ -94,7 +94,7 @@ export const HeroSection = (): JSX.Element => {
                 : 'translate-y-8 opacity-0'
             }`}
           >
-            Cuisine Alger concoit et fabrique des cuisines modernes sur mesure dans toute l'Algérie. 
+            Cuisine Alger concoit et fabrique des cuisines modernes sur mesure dans toute l&apos;Algérie. 
             De la conception 3D a l installation, nous creeons des espaces fonctionnels et esthetiques 
             avec des materiaux de qualite et un savoir-faire artisanal.
           </p>
@@ -130,7 +130,7 @@ export const HeroSection = (): JSX.Element => {
             }`}
           >
             <div className="text-sm uppercase tracking-[0.3em] text-white/70">
-              Toute l'Algérie - 58 wilayas
+              Toute l&apos;Algérie - 58 wilayas
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
               <span className="whitespace-nowrap">Design personnalise</span>
