@@ -36,34 +36,71 @@ export const LocationMap = (): JSX.Element => {
 
       <div className="rounded-3xl border border-neutral-200 bg-white/80 px-6 py-10 shadow-sm">
         <h3 className="text-lg font-semibold text-neutral-900">
-          Notre localisation
+          Nos localisations
         </h3>
-        <div className="mt-6 h-64 rounded-2xl border border-neutral-200 overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localisation Cuisine Alger"
-            className="w-full h-full"
-          />
-        </div>
-        <div className="mt-6 grid gap-4 text-sm text-neutral-600">
-          <div>
-            <p className="font-semibold text-neutral-900">Adresse</p>
-            <p className="mt-1">
-              Cuisine Alger
-              <br />
-              Bouzareah, Alger, Algérie
-            </p>
+        <p className="mt-2 text-sm text-neutral-600">
+          Nous disposons de deux points de service pour mieux vous servir
+        </p>
+        
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          {/* Bouzareah Location */}
+          <div className="space-y-4">
+            <h4 className="text-base font-semibold text-neutral-900">Bouzareah</h4>
+            <div className="h-48 rounded-2xl border border-neutral-200 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cuisine Alger - Bouzareah"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-sm text-neutral-600">
+              <p className="font-semibold text-neutral-900">Adresse</p>
+              <p className="mt-1">
+                Cuisine Alger
+                <br />
+                Bouzareah, Alger, Algérie
+              </p>
+            </div>
           </div>
+
+          {/* Larbaâ Location */}
+          <div className="space-y-4">
+            <h4 className="text-base font-semibold text-neutral-900">Larbaâ</h4>
+            <div className="h-48 rounded-2xl border border-neutral-200 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cuisine Alger - Larbaâ"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-sm text-neutral-600">
+              <p className="font-semibold text-neutral-900">Adresse</p>
+              <p className="mt-1">
+                Cuisine Alger
+                <br />
+                Larbaâ, Blida, Algérie
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-4 text-sm text-neutral-600">
           <div>
             <p className="font-semibold text-neutral-900">Accessibilité</p>
             <p className="mt-1">
-              Accès facile en voiture, possibilité de parking sur demande.
+              Accès facile en voiture aux deux emplacements, possibilité de parking sur demande.
             </p>
           </div>
           <div>

@@ -130,7 +130,7 @@ export const HeroSection = (): JSX.Element => {
             }`}
           >
             <div className="text-sm uppercase tracking-[0.3em] text-white/70">
-              Toute l&apos;Algérie - 58 wilayas
+              Bouzareah & Larbaâ - 58 wilayas
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
               <span className="whitespace-nowrap">Design personnalise</span>
