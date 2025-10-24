@@ -42,25 +42,29 @@ export const LocationMap = (): JSX.Element => {
           Nous disposons de deux points de service pour mieux vous servir
         </p>
         
-        <div className="mt-6 grid gap-6 lg:grid-cols-2">
-          {/* Bouzareah Location */}
-          <div className="space-y-4">
-            <h4 className="text-base font-semibold text-neutral-900">Bouzareah</h4>
-            <div className="h-48 rounded-2xl border border-neutral-200 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Cuisine Alger - Bouzareah"
-                className="w-full h-full"
-              />
+        <div className="mt-6 h-64 rounded-2xl border border-neutral-200 overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Cuisine Alger - Nos localisations"
+            className="w-full h-full"
+          />
+        </div>
+
+        <div className="mt-6 grid gap-4 text-sm text-neutral-600 sm:grid-cols-2">
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center mt-0.5">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
             </div>
-            <div className="text-sm text-neutral-600">
-              <p className="font-semibold text-neutral-900">Adresse</p>
+            <div>
+              <p className="font-semibold text-neutral-900">Bouzareah</p>
               <p className="mt-1">
                 Cuisine Alger
                 <br />
@@ -69,24 +73,14 @@ export const LocationMap = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Larbaâ Location */}
-          <div className="space-y-4">
-            <h4 className="text-base font-semibold text-neutral-900">Larbaâ</h4>
-            <div className="h-48 rounded-2xl border border-neutral-200 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.123456789!2d3.1718739!3d36.5656777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128eff12c7cb1229%3A0xb92a54a68d5c140e!2sCuisine%20Alger!5e0!3m2!1sfr!2sdz!4v1234567890123!5m2!1sfr!2sdz"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Cuisine Alger - Larbaâ"
-                className="w-full h-full"
-              />
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center mt-0.5">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
             </div>
-            <div className="text-sm text-neutral-600">
-              <p className="font-semibold text-neutral-900">Adresse</p>
+            <div>
+              <p className="font-semibold text-neutral-900">Larbaâ</p>
               <p className="mt-1">
                 Cuisine Alger
                 <br />
