@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Cuisine Alger' }],
   creator: 'Cuisine Alger',
   publisher: 'Cuisine Alger',
+  icons: {
+    icon: '/picturs/logo2.jpg',
+    shortcut: '/picturs/logo2.jpg',
+    apple: '/picturs/logo2.jpg',
+  },
   formatDetection: {
     email: false,
     address: false,

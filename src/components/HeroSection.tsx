@@ -9,13 +9,11 @@ export const HeroSection = (): JSX.Element => {
   const [elementsVisible, setElementsVisible] = useState<{
     subtitle: boolean
     title: boolean
-    description: boolean
     buttons: boolean
     footer: boolean
   }>({
     subtitle: false,
     title: false,
-    description: false,
     buttons: false,
     footer: false
   })
@@ -30,9 +28,8 @@ export const HeroSection = (): JSX.Element => {
       const delays = {
         subtitle: 200,
         title: 400,
-        description: 600,
-        buttons: 800,
-        footer: 1000
+        buttons: 600,
+        footer: 800
       }
 
       Object.entries(delays).forEach(([key, delay]) => {
@@ -87,17 +84,6 @@ export const HeroSection = (): JSX.Element => {
             Cuisines sur mesure alliant design contemporain et fonctionnalite
           </h1>
 
-          <p 
-            className={`text-lg leading-relaxed text-white/90 sm:text-xl transition-all duration-700 ease-out ${
-              elementsVisible.description
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0'
-            }`}
-          >
-            Cuisine Alger concoit et fabrique des cuisines modernes sur mesure dans toute l&apos;Algérie. 
-            De la conception 3D a l installation, nous creeons des espaces fonctionnels et esthetiques 
-            avec des materiaux de qualite et un savoir-faire artisanal.
-          </p>
 
           <div 
             className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 transition-all duration-700 ease-out ${

@@ -54,7 +54,7 @@ export const Navbar = (): JSX.Element => {
           >
             <div className="relative w-12 h-12 md:w-14 md:h-14">
               <Image
-                src="/picturs/logo.png"
+                src="/picturs/logo2.jpg"
                 alt="Cuisine Alger Logo"
                 fill
                 className="object-contain rounded-full"
