@@ -27,10 +27,10 @@ export const CTASection = (): JSX.Element => {
             Prêt à commencer ?
           </p>
           <h2 className="mt-4 text-4xl font-elegant font-semibold text-iptvzh-navy-blue sm:text-5xl">
-            Rejoignez des milliers d'utilisateurs satisfaits
+            Rejoignez des milliers d&apos;utilisateurs satisfaits
           </h2>
           <p className="mt-6 text-base leading-relaxed text-iptvzh-gray-blue">
-            Profitez des meilleurs services numériques dès aujourd'hui ! 
+            Profitez des meilleurs services numériques dès aujourd&apos;hui ! 
             Livraison instantanée après paiement et support client 24/7.
           </p>
         </div>
