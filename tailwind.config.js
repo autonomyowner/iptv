@@ -8,27 +8,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Modern Kitchen Color Palette
-        kitchen: {
+        // IPTVZH Blue & Gold Color Palette
+        iptvzh: {
           white: {
             clean: '#FFFFFF',
-            soft: '#F0F0F0',
+            soft: '#F8FAFC',
           },
           black: {
-            deep: '#000000',
-            soft: '#1A1A1A',
+            deep: '#0F172A',
+            soft: '#1E293B',
           },
-          marble: {
-            gray: '#B0B0B0',
-            'gray-light': '#C8C8C8',
+          navy: {
+            blue: '#1E3A8A',
+            'blue-dark': '#1E40AF',
+            'blue-light': '#3B82F6',
           },
-          warm: {
-            light: '#FFF7E6',
-            'light-soft': '#FFECD6',
+          gold: {
+            primary: '#D97706',
+            light: '#F59E0B',
+            dark: '#B45309',
+            soft: '#FEF3C7',
+          },
+          gray: {
+            blue: '#64748B',
+            'blue-light': '#94A3B8',
           },
           footer: {
-            dark: '#1C4831',
+            dark: '#0F172A',
           },
+          // Legacy kitchen colors for compatibility
           lux: {
             'dark-green': {
               50: '#f0f9f4',

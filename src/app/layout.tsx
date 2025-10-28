@@ -17,51 +17,51 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
+  title: 'iptvzh - Votre destination #1 pour les produits numériques à prix imbattables',
   description:
-    'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
+    'Découvrez une large gamme de services digitaux : IPTV, comptes Netflix, RDP, VPN, hébergement, design tools et plus encore — livrés instantanément après paiement.',
   keywords:
-    'cuisine moderne, fabrication cuisine, menuiserie, Bouzareah, cuisine sur mesure, amenagement cuisine, plans de travail',
-  authors: [{ name: 'Cuisine Alger' }],
-  creator: 'Cuisine Alger',
-  publisher: 'Cuisine Alger',
+    'IPTV, Netflix, Spotify, VPN, RDP, Canva Pro, Shopify, produits numériques, abonnements premium, livraison instantanée',
+  authors: [{ name: 'iptvzh' }],
+  creator: 'iptvzh',
+  publisher: 'iptvzh',
   icons: {
-    icon: '/picturs/logo2.jpg',
-    shortcut: '/picturs/logo2.jpg',
-    apple: '/picturs/logo2.jpg',
+    icon: '/picturs/logo.png',
+    shortcut: '/picturs/logo.png',
+    apple: '/picturs/logo.png',
   },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://cuisine-alger.com'),
+  metadataBase: new URL('https://iptvzh.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
+    title: 'iptvzh - Votre destination #1 pour les produits numériques à prix imbattables',
     description:
-      'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
-    url: 'https://cuisine-alger.com',
-    siteName: 'Cuisine Alger',
+      'Découvrez une large gamme de services digitaux : IPTV, comptes Netflix, RDP, VPN, hébergement, design tools et plus encore — livrés instantanément après paiement.',
+    url: 'https://iptvzh.com',
+    siteName: 'iptvzh',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/picturs/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
+        alt: 'iptvzh - Votre destination #1 pour les produits numériques à prix imbattables',
       },
     ],
-    locale: 'fr_DZ',
+    locale: 'fr_FR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cuisine Alger - Conception et fabrication de cuisines modernes a Bouzareah',
+    title: 'iptvzh - Votre destination #1 pour les produits numériques à prix imbattables',
     description:
-      'Conception et fabrication de cuisines modernes a Bouzareah. Cuisines sur mesure, menuiserie haut de gamme et amenagement complet.',
-    images: ['/og-image.jpg'],
+      'Découvrez une large gamme de services digitaux : IPTV, comptes Netflix, RDP, VPN, hébergement, design tools et plus encore — livrés instantanément après paiement.',
+    images: ['/picturs/hero.jpg'],
   },
   robots: {
     index: true,
@@ -91,15 +91,20 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="pt-20 md:pt-24 pb-20">{children}</main>
-        <footer className="bg-kitchen-lux-dark-green-800 backdrop-blur-md border-t border-kitchen-lux-dark-green-800/20 text-kitchen-white-clean py-4">
+        <footer className="bg-gradient-iptvzh backdrop-blur-md border-t border-iptvzh-gold-primary/20 text-iptvzh-white-clean py-4">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-sm">
+            <div className="mb-4 text-sm">
+              <p className="mb-2">À propos | Conditions | Politique de confidentialité | Contact</p>
+              <p className="mb-2">Paiement sécurisé par PayPal / Carte / Crypto</p>
+              <p>© 2025 iptvzh.com – Tous droits réservés.</p>
+            </div>
+            <p className="text-xs text-iptvzh-gold-soft">
               Made by{' '}
               <a
                 href="https://www.sitedz.store"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-kitchen-warm-light hover:text-kitchen-warm-light-soft transition-colors underline"
+                className="text-iptvzh-gold-light hover:text-iptvzh-gold-primary transition-colors underline"
               >
                 www.sitedz.store
               </a>

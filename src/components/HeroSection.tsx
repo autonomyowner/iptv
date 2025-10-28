@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export const HeroSection = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -41,9 +40,9 @@ export const HeroSection = (): JSX.Element => {
   }, [isVisible])
 
   const handleContactClick = (): void => {
-    const phoneNumber = '+213776797904'
+    const phoneNumber = '+33745947222'
     const message =
-      'Bonjour! Je suis interesse(e) par vos services de conception et fabrication de cuisines.'
+      'Bonjour! Je suis intéressé(e) par vos produits numériques et services IPTV.'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message,
     )}`
@@ -51,17 +50,7 @@ export const HeroSection = (): JSX.Element => {
   }
 
   return (
-    <section className="relative isolate overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/picturs/hero.jpg"
-          alt="Cuisine Alger - Decoration evennementielle elegante"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
+    <section className="relative isolate overflow-hidden bg-gradient-iptvzh-hero">
       <div className="mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-4 py-28 sm:px-6 lg:px-8 lg:py-36">
         <div className="max-w-3xl space-y-8">
           <p 
@@ -71,7 +60,7 @@ export const HeroSection = (): JSX.Element => {
                 : 'translate-y-8 opacity-0'
             }`}
           >
-            Fabricant de cuisines modernes
+            Produits numériques premium
           </p>
 
           <h1 
@@ -81,7 +70,7 @@ export const HeroSection = (): JSX.Element => {
                 : 'translate-y-12 opacity-0'
             }`}
           >
-            Cuisines sur mesure alliant design contemporain et fonctionnalite
+            Bienvenue sur iptvzh – Votre destination #1 pour les produits numériques à prix imbattables
           </h1>
 
 
@@ -97,14 +86,14 @@ export const HeroSection = (): JSX.Element => {
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-black transition-all duration-200 hover:bg-white/90"
               type="button"
             >
-              Prendre contact
+              🛒 Acheter maintenant
             </button>
 
             <Link
               href="/services"
               className="inline-flex items-center justify-center rounded-full border border-white/50 px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-all duration-200 hover:border-white hover:bg-white/10"
             >
-              Voir nos services
+              🎯 Explorer nos offres
             </Link>
           </div>
 
@@ -116,12 +105,12 @@ export const HeroSection = (): JSX.Element => {
             }`}
           >
             <div className="text-sm uppercase tracking-[0.3em] text-white/70">
-              Bouzareah & Larbaâ - 58 wilayas
+              Livraison instantanée - Support 24/7
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
-              <span className="whitespace-nowrap">Design personnalise</span>
-              <span className="whitespace-nowrap">Fabrication locale</span>
-              <span className="whitespace-nowrap">Installation complete</span>
+              <span className="whitespace-nowrap">IPTV Premium</span>
+              <span className="whitespace-nowrap">Comptes Netflix</span>
+              <span className="whitespace-nowrap">VPN & RDP</span>
             </div>
           </div>
         </div>

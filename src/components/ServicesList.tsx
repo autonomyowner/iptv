@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 type Service = {
   id: string
@@ -8,118 +9,167 @@ type Service = {
   features: string[]
   image: string
   signature: string
+  icon: string
+  href: string
+}
+
+type SpecialOffer = {
+  id: string
+  title: string
+  price: string
+  originalPrice?: string
+  description: string
+  badge: string
 }
 
 const services: Service[] = [
   {
-    id: 'cuisine-moderne',
-    title: 'Cuisine moderne',
+    id: 'iptv-streaming',
+    title: '📺 IPTV & Streaming',
     description:
-      'Design contemporain aux lignes epurees avec des materiaux haut de gamme pour une cuisine fonctionnelle et esthetique.',
+      'IPTV Yinix, Dream IPTV, Dino IPTV, Magnum OTT, Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime. Profitez de milliers de chaînes et de films en illimité !',
     features: [
-      'Conception 3D et plans detailles',
-      'Materiaux premium (lacquer, melamine, bois massif)',
-      'Electromenager integre et dissimule',
-      'Eclairage LED integre et ambiant',
-      'Installation complete par nos equipes',
+      'IPTV Yinix – 6 mois / 12 mois / 24 mois',
+      'Dream IPTV, Dino IPTV, Magnum OTT',
+      'Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime',
+      'Milliers de chaînes et de films en illimité',
+      'Livraison instantanée après paiement',
     ],
-    image: '/picturs/3.jpg',
-    signature: 'Design contemporain',
+    image: '/picturs/gogo.jpg',
+    signature: 'Milliers de chaînes',
+    icon: '📺',
+    href: '/services#iptv-streaming',
   },
   {
-    id: 'cuisine-classique',
-    title: 'Cuisine classique',
+    id: 'comptes-premium',
+    title: '💻 Comptes Premium & Abonnements',
     description:
-      'Style intemporel avec bois noble et finitions raffinees pour une cuisine chaleureuse et traditionnelle.',
+      'Spotify Premium, Canva Pro, ChatGPT Plus (via clé d\'accès API), Envato Elements. Des outils professionnels à petit prix pour vos besoins créatifs et personnels.',
     features: [
-      'Bois massif et placage de qualite',
-      'Finitions traditionnelles (vernis, cire, patine)',
-      'Poignees et accessoires de style',
-      'Plans de travail en granit ou marbre',
-      'Fabrication artisanale sur mesure',
+      'Spotify Premium',
+      'Canva Pro',
+      'ChatGPT Plus (via clé d\'accès API)',
+      'Envato Elements',
+      'Outils professionnels à petit prix',
     ],
-    image: '/picturs/7.jpg',
-    signature: 'Tradition et qualite',
+    image: '/picturs/1.jpg',
+    signature: 'Outils professionnels',
+    icon: '💻',
+    href: '/services#comptes-premium',
   },
   {
-    id: 'amenagement-sur-mesure',
-    title: 'Amenagement sur mesure',
+    id: 'rdp-vps-cloud',
+    title: '🧠 RDP / VPS & Services Cloud',
     description:
-      'Optimisation maximale de l espace avec des solutions personnalisees adaptees a vos contraintes et besoins.',
+      'RDP Google / Windows, VPS Premium pour hébergement, Serveurs dédiés haute performance. Puissance, sécurité et rapidité pour vos projets en ligne.',
     features: [
-      'Etude ergonomique de l espace',
-      'Solutions de rangement optimisees',
-      'Adaptation aux contraintes architecturales',
-      'Integration d ilots et peninsules',
-      'Conception modulaire et evolutive',
+      'RDP Google / Windows',
+      'VPS Premium pour hébergement',
+      'Serveurs dédiés haute performance',
+      'Puissance, sécurité et rapidité',
+      'Support technique 24/7',
     ],
-    image: '/picturs/9.jpg',
-    signature: 'Optimisation espace',
+    image: '/picturs/iron.jpg',
+    signature: 'Haute performance',
+    icon: '🧠',
+    href: '/services#rdp-vps-cloud',
   },
   {
-    id: 'plans-de-travail',
-    title: 'Plans de travail',
+    id: 'vpn-securite',
+    title: '🔐 VPN & Sécurité',
     description:
-      'Granit, quartz, marbre ou stratifie pour des plans de travail durables et esthetiques adaptes a votre style.',
+      'NordVPN, ExpressVPN, Surfshark. Protégez votre vie privée et accédez à tous vos contenus sans restrictions.',
     features: [
-      'Granit naturel et quartz composite',
-      'Marbre et pierres naturelles',
-      'Stratifie haute pression',
-      'Decoupe et usinage precis',
-      'Pose et finition professionnelle',
+      'NordVPN',
+      'ExpressVPN',
+      'Surfshark',
+      'Protection de la vie privée',
+      'Accès sans restrictions',
     ],
-    image: '/picturs/7.jpg',
-    signature: 'Materiaux nobles',
+    image: '/picturs/hero.jpg',
+    signature: 'Sécurité maximale',
+    icon: '🔐',
+    href: '/services#vpn-securite',
   },
   {
-    id: 'menuiserie',
-    title: 'Menuiserie',
+    id: 'ecommerce-business',
+    title: '🛍️ E-commerce & Business Tools',
     description:
-      'Placards, rangements et ilots centraux fabriques sur mesure pour maximiser l espace et l organisation.',
+      'Comptes Shopify, Abonnements Dropify, Licences Microsoft Office / Windows. Tout pour booster votre activité en ligne.',
     features: [
-      'Placards hauts et bas sur mesure',
-      'Ilots centraux et peninsules',
-      'Rangements specifiques (epices, vaisselle)',
-      'Tiroirs et portes a fermeture douce',
-      'Fabrication locale et garantie',
+      'Comptes Shopify',
+      'Abonnements Dropify',
+      'Licences Microsoft Office / Windows',
+      'Outils pour booster votre activité',
+      'Support et formation inclus',
     ],
-    image: '/picturs/10.jpg',
-    signature: 'Menuiserie d art',
+    image: '/picturs/1.jpg',
+    signature: 'Business tools',
+    icon: '🛍️',
+    href: '/services#ecommerce-business',
   },
   {
-    id: 'renovation-complete',
-    title: 'Renovation complete',
+    id: 'design-creation',
+    title: '🎨 Outils de Design & Création',
     description:
-      'Transformation totale de votre cuisine, de la demolition a la finition, pour un resultat cles en main.',
+      'Adobe Suite (Photoshop, Illustrator, Premiere), Canva Pro, Figma Premium. Créez, éditez et partagez sans limites.',
     features: [
-      'Demolition et preparation des murs',
-      'Plomberie et electricite',
-      'Pose de carrelage et peinture',
-      'Installation complete de la cuisine',
-      'Suivi et garantie de finition',
+      'Adobe Suite (Photoshop, Illustrator, Premiere)',
+      'Canva Pro',
+      'Figma Premium',
+      'Création sans limites',
+      'Formation et support inclus',
     ],
-    image: '/picturs/2.jpg',
-    signature: 'Renovation cles en main',
+    image: '/picturs/gogo.jpg',
+    signature: 'Création illimitée',
+    icon: '🎨',
+    href: '/services#design-creation',
+  },
+]
+
+const specialOffers: SpecialOffer[] = [
+  {
+    id: 'crystal-ott',
+    title: 'Crystal OTT IPTV',
+    price: '35 $',
+    description: '12 mois d\'abonnement',
+    badge: '🔥 Meilleure vente',
+  },
+  {
+    id: 'canva-pro',
+    title: 'Canva Pro',
+    price: '10 $',
+    description: '1 an d\'abonnement',
+    badge: '🔥 Populaire',
+  },
+  {
+    id: 'nordvpn',
+    title: 'NordVPN',
+    price: '15 $',
+    description: '1 an d\'abonnement',
+    badge: '🔥 Sécurisé',
+  },
+  {
+    id: 'netflix',
+    title: 'Netflix',
+    price: '5 $',
+    description: '1 mois d\'abonnement',
+    badge: '🔥 Nouveau',
   },
 ]
 
 export const ServicesList = (): JSX.Element => {
   return (
     <div className="space-y-20">
-      {services.map((service, index) => {
-        const isReversed = index % 2 === 1
-        return (
-          <section
+      {/* Categories Grid */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <Link
             key={service.id}
-            id={service.id}
-            className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2"
+            href={service.href}
+            className="group relative block overflow-hidden rounded-3xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/30 to-iptvzh-white-clean shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
           >
-            <div
-              className={`relative overflow-hidden rounded-[32px] border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-kitchen-lux-dark-green-200/20 ${
-                isReversed ? 'lg:order-2' : ''
-              }`}
-            >
-            <div className="relative aspect-[4/3] bg-neutral-100 flex items-center justify-center">
+            <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 flex items-center justify-center">
               {service.image ? (
                 <Image
                   src={service.image}
@@ -129,54 +179,80 @@ export const ServicesList = (): JSX.Element => {
                 />
               ) : (
                 <div className="text-center text-neutral-400">
-                  <div className="text-4xl mb-2">📸</div>
+                  <div className="text-6xl mb-2">{service.icon}</div>
                   <p className="text-sm">Image à venir</p>
                 </div>
               )}
             </div>
-            <div className="flex items-center justify-between px-6 py-5">
-              <span className="text-xs uppercase tracking-[0.35em] text-kitchen-lux-dark-green-600">
+
+            <div className="flex h-full flex-col gap-5 p-6">
+              <span className="text-xs uppercase tracking-[0.35em] text-iptvzh-gold-primary">
                 {service.signature}
               </span>
-              <span className="text-xs uppercase tracking-[0.35em] text-kitchen-lux-dark-green-500">
-                Cuisine Alger
-              </span>
-            </div>
-            </div>
-
-            <div className={`space-y-6 ${isReversed ? 'lg:order-1' : ''}`}>
-            <div>
-              <h2 className="text-3xl font-elegant font-semibold text-kitchen-lux-dark-green-800">
+              <h3 className="text-2xl font-elegant font-semibold text-iptvzh-navy-blue">
                 {service.title}
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-kitchen-lux-dark-green-700">
+              </h3>
+              <p className="text-sm leading-relaxed text-iptvzh-gray-blue">
                 {service.description}
               </p>
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-kitchen-lux-dark-green-600">
-                Compris dans la prestation
-              </p>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kitchen-lux-dark-green-700">
-                {service.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
+              <div className="mt-2 space-y-1">
+                {service.features.slice(0, 3).map((feature, index) => (
+                  <div key={index} className="text-xs text-iptvzh-gold-primary">
+                    • {feature}
+                  </div>
                 ))}
-              </ul>
+              </div>
+              <span className="text-sm font-semibold uppercase tracking-[0.25em] text-iptvzh-navy-blue group-hover:text-iptvzh-gold-primary transition-colors duration-200">
+                Voir les produits
+              </span>
             </div>
+          </Link>
+        ))}
+      </div>
 
-            <div>
-              <button
-                type="button"
-                className="rounded-full border border-kitchen-lux-dark-green-400 px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-kitchen-lux-dark-green-700 transition-colors duration-200 hover:border-kitchen-lux-dark-green-600 hover:text-kitchen-lux-dark-green-800 hover:bg-kitchen-lux-dark-green-50"
-              >
-                Demander un devis
-              </button>
+      {/* Special Offers Section */}
+      <div className="mt-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-elegant font-semibold text-iptvzh-navy-blue sm:text-5xl">
+            🔥 Offres Spéciales
+          </h2>
+          <p className="mt-4 text-lg text-iptvzh-gray-blue">
+            Les meilleures ventes du moment — livraison instantanée !
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {specialOffers.map((offer) => (
+            <div
+              key={offer.id}
+              className="relative overflow-hidden rounded-2xl border border-iptvzh-gold-primary/30 bg-gradient-to-br from-iptvzh-gold-soft/20 to-iptvzh-white-clean shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
+            >
+              <div className="absolute top-3 right-3">
+                <span className="inline-flex items-center rounded-full bg-iptvzh-gold-primary px-3 py-1 text-xs font-semibold text-iptvzh-white-clean">
+                  {offer.badge}
+                </span>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-elegant font-semibold text-iptvzh-navy-blue mb-2">
+                  {offer.title}
+                </h3>
+                <p className="text-sm text-iptvzh-gray-blue mb-4">
+                  {offer.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-iptvzh-gold-primary">
+                    {offer.price}
+                  </div>
+                  <button className="rounded-full bg-iptvzh-gold-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-iptvzh-white-clean transition-colors duration-200 hover:bg-iptvzh-gold-dark">
+                    Acheter
+                  </button>
+                </div>
+              </div>
             </div>
-            </div>
-          </section>
-        )
-      })}
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

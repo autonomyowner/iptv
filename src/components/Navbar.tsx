@@ -12,7 +12,7 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: 'Accueil', href: '/' },
-  { label: 'Services', href: '/services' },
+  { label: 'Produits', href: '/services' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -42,7 +42,7 @@ export const Navbar = (): JSX.Element => {
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? 'bg-kitchen-white-clean/92 backdrop-blur border-b border-kitchen-marble-gray-light shadow-sm'
+          ? 'bg-iptvzh-white-clean/92 backdrop-blur border-b border-iptvzh-gray-blue-light shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -54,19 +54,19 @@ export const Navbar = (): JSX.Element => {
           >
             <div className="relative w-12 h-12 md:w-14 md:h-14">
               <Image
-                src="/picturs/logo2.jpg"
-                alt="Cuisine Alger Logo"
+                src="/picturs/logo.png"
+                alt="iptvzh Logo"
                 fill
                 className="object-contain rounded-full"
                 priority
               />
             </div>
-            <div className="flex flex-col leading-tight text-kitchen-black-deep">
+            <div className="flex flex-col leading-tight text-iptvzh-black-deep">
               <span className="text-xl font-semibold tracking-wide uppercase">
-                Cuisine Alger
+                iptvzh
               </span>
-              <span className="text-xs font-light text-kitchen-marble-gray">
-                Conception et fabrication de cuisines
+              <span className="text-xs font-light text-iptvzh-gray-blue">
+                Produits numériques à prix imbattables
               </span>
             </div>
           </Link>
@@ -80,8 +80,8 @@ export const Navbar = (): JSX.Element => {
                   href={item.href}
                   className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-200 ${
                     isActive
-                      ? 'text-kitchen-black-deep'
-                      : 'text-kitchen-marble-gray hover:text-kitchen-black-deep'
+                      ? 'text-iptvzh-black-deep'
+                      : 'text-iptvzh-gray-blue hover:text-iptvzh-black-deep'
                   }`}
                 >
                   {item.label}
@@ -92,7 +92,7 @@ export const Navbar = (): JSX.Element => {
 
           <button
             onClick={toggleMobileMenu}
-            className="inline-flex items-center justify-center rounded-full border border-kitchen-lux-dark-green-300 bg-gradient-to-r from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-kitchen-lux-dark-green-800 transition-all duration-200 hover:border-kitchen-lux-dark-green-500 hover:bg-gradient-to-r hover:from-kitchen-lux-dark-green-100 hover:to-kitchen-lux-dark-green-200 hover:text-kitchen-lux-dark-green-900 hover:shadow-md hover:shadow-kitchen-lux-dark-green-200/30 md:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-iptvzh-gold-primary bg-gradient-to-r from-iptvzh-gold-soft to-iptvzh-gold-light px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-iptvzh-navy-blue transition-all duration-200 hover:border-iptvzh-gold-dark hover:bg-gradient-to-r hover:from-iptvzh-gold-light hover:to-iptvzh-gold-primary hover:text-iptvzh-black-deep hover:shadow-md hover:shadow-iptvzh-gold-primary/30 md:hidden"
             aria-expanded={isMobileMenuOpen}
             aria-label="Basculer la navigation"
             type="button"
@@ -106,7 +106,7 @@ export const Navbar = (): JSX.Element => {
             isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="mb-4 rounded-2xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 px-3 pb-4 pt-2 backdrop-blur shadow-lg shadow-kitchen-lux-dark-green-200/20">
+          <div className="mb-4 rounded-2xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/50 to-iptvzh-white-clean px-3 pb-4 pt-2 backdrop-blur shadow-lg shadow-iptvzh-gold-primary/20">
             <div className="grid gap-2">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
@@ -116,8 +116,8 @@ export const Navbar = (): JSX.Element => {
                     href={item.href}
                     className={`rounded-full px-4 py-3 text-sm font-medium uppercase tracking-[0.2em] transition-all duration-200 ${
                       isActive
-                        ? 'bg-kitchen-lux-dark-green-200 text-kitchen-lux-dark-green-900 shadow-sm'
-                        : 'text-kitchen-lux-dark-green-700 hover:bg-kitchen-lux-dark-green-200 hover:text-kitchen-lux-dark-green-900 hover:shadow-sm'
+                        ? 'bg-iptvzh-gold-primary text-iptvzh-white-clean shadow-sm'
+                        : 'text-iptvzh-navy-blue hover:bg-iptvzh-gold-primary hover:text-iptvzh-white-clean hover:shadow-sm'
                     }`}
                   >
                     {item.label}

@@ -94,8 +94,8 @@ Le thème utilise un gradient élégant :
 ## 📞 Contact
 
 ### Informations de Contact
-- **WhatsApp** : +213 77 679 79 04
-- **Téléphone** : +213 77 679 79 04
+- **WhatsApp** : +33 7 45 94 72 22
+- **Téléphone** : +33 7 45 94 72 22
 - **Email** : contact@cuisine-alger.com
 - **Localisation** : Bouzareah, Algérie
 
@@ -113,7 +113,7 @@ Le thème utilise un gradient élégant :
 Créez un fichier `.env.local` :
 ```env
 NEXT_PUBLIC_SITE_URL=https://cuisine-alger.com
-NEXT_PUBLIC_PHONE_NUMBER=+213776797904
+NEXT_PUBLIC_PHONE_NUMBER=+33745947222
 NEXT_PUBLIC_EMAIL=contact@cuisine-alger.com
 ```
 

@@ -8,35 +8,69 @@ type ServiceCard = {
   highlight: string
   image: string
   href: string
+  products: string[]
 }
 
 const services: ServiceCard[] = [
   {
-    id: 'cuisine-moderne',
-    title: 'Cuisine moderne',
+    id: 'iptv-streaming',
+    title: '📺 IPTV & Streaming',
     description:
-      'Design contemporain aux lignes epurees avec materiaux haut de gamme pour une cuisine fonctionnelle.',
-    highlight: 'Design contemporain',
-    image: '/picturs/3.jpg',
-    href: '/services#cuisine-moderne',
+      'IPTV Yinix, Dream IPTV, Dino IPTV, Magnum OTT, Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime. Profitez de milliers de chaînes et de films en illimité !',
+    highlight: 'Milliers de chaînes',
+    image: '/picturs/gogo.jpg',
+    href: '/services#iptv-streaming',
+    products: ['IPTV Yinix – 6 mois / 12 mois / 24 mois', 'Dream IPTV, Dino IPTV, Magnum OTT', 'Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime']
   },
   {
-    id: 'cuisine-classique',
-    title: 'Cuisine classique',
+    id: 'comptes-premium',
+    title: '💻 Comptes Premium & Abonnements',
     description:
-      'Style intemporel avec bois noble et finitions raffinees pour une cuisine chaleureuse et traditionnelle.',
-    highlight: 'Tradition et qualite',
-    image: '/picturs/7.jpg',
-    href: '/services#cuisine-classique',
+      'Spotify Premium, Canva Pro, ChatGPT Plus (via clé d\'accès API), Envato Elements. Des outils professionnels à petit prix pour vos besoins créatifs et personnels.',
+    highlight: 'Outils professionnels',
+    image: '/picturs/1.jpg',
+    href: '/services#comptes-premium',
+    products: ['Spotify Premium', 'Canva Pro', 'ChatGPT Plus (via clé d\'accès API)', 'Envato Elements']
   },
   {
-    id: 'renovation-complete',
-    title: 'Renovation complete',
+    id: 'rdp-vps-cloud',
+    title: '🧠 RDP / VPS & Services Cloud',
     description:
-      'Transformation totale de votre cuisine, de la demolition a la finition, pour un resultat cles en main.',
-    highlight: 'Renovation cles en main',
-    image: '/picturs/2.jpg',
-    href: '/services#renovation-complete',
+      'RDP Google / Windows, VPS Premium pour hébergement, Serveurs dédiés haute performance. Puissance, sécurité et rapidité pour vos projets en ligne.',
+    highlight: 'Haute performance',
+    image: '/picturs/iron.jpg',
+    href: '/services#rdp-vps-cloud',
+    products: ['RDP Google / Windows', 'VPS Premium pour hébergement', 'Serveurs dédiés haute performance']
+  },
+  {
+    id: 'vpn-securite',
+    title: '🔐 VPN & Sécurité',
+    description:
+      'NordVPN, ExpressVPN, Surfshark. Protégez votre vie privée et accédez à tous vos contenus sans restrictions.',
+    highlight: 'Sécurité maximale',
+    image: '/picturs/hero.jpg',
+    href: '/services#vpn-securite',
+    products: ['NordVPN', 'ExpressVPN', 'Surfshark']
+  },
+  {
+    id: 'ecommerce-business',
+    title: '🛍️ E-commerce & Business Tools',
+    description:
+      'Comptes Shopify, Abonnements Dropify, Licences Microsoft Office / Windows. Tout pour booster votre activité en ligne.',
+    highlight: 'Business tools',
+    image: '/picturs/1.jpg',
+    href: '/services#ecommerce-business',
+    products: ['Comptes Shopify', 'Abonnements Dropify', 'Licences Microsoft Office / Windows']
+  },
+  {
+    id: 'design-creation',
+    title: '🎨 Outils de Design & Création',
+    description:
+      'Adobe Suite (Photoshop, Illustrator, Premiere), Canva Pro, Figma Premium. Créez, éditez et partagez sans limites.',
+    highlight: 'Création illimitée',
+    image: '/picturs/gogo.jpg',
+    href: '/services#design-creation',
+    products: ['Adobe Suite (Photoshop, Illustrator, Premiere)', 'Canva Pro', 'Figma Premium']
   },
 ]
 
@@ -45,15 +79,15 @@ export const ServicesPreview = (): JSX.Element => {
     <section className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-kitchen-lux-dark-green-600">
-            Savoir faire
+          <p className="text-xs uppercase tracking-[0.4em] text-iptvzh-gold-primary">
+            Catégories principales
           </p>
-          <h2 className="mt-5 text-4xl font-elegant font-semibold text-kitchen-lux-dark-green-800 sm:text-5xl">
-            Des cuisines soignees pour chaque style
+          <h2 className="mt-5 text-4xl font-elegant font-semibold text-iptvzh-navy-blue sm:text-5xl">
+            Découvrez nos produits numériques premium
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-kitchen-lux-dark-green-700">
-            Nous concevons des cuisines sur mesure qui s adaptent a votre style de vie
-            et assurent une experience fonctionnelle et esthetique au quotidien.
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-iptvzh-gray-blue">
+            Découvrez une large gamme de services digitaux : IPTV, comptes Netflix, RDP, VPN, 
+            hébergement, design tools et plus encore — livrés instantanément après paiement.
           </p>
         </div>
 
@@ -62,7 +96,7 @@ export const ServicesPreview = (): JSX.Element => {
             <Link
               key={service.id}
               href={service.href}
-              className="group relative block overflow-hidden rounded-3xl border border-kitchen-lux-dark-green-200 bg-gradient-to-br from-kitchen-lux-dark-green-50 to-kitchen-lux-dark-green-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-kitchen-lux-dark-green-200/20"
+              className="group relative block overflow-hidden rounded-3xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/30 to-iptvzh-white-clean shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 flex items-center justify-center">
                 {service.image ? (
@@ -81,17 +115,24 @@ export const ServicesPreview = (): JSX.Element => {
               </div>
 
               <div className="flex h-full flex-col gap-5 p-6">
-                <span className="text-xs uppercase tracking-[0.35em] text-kitchen-lux-dark-green-600">
+                <span className="text-xs uppercase tracking-[0.35em] text-iptvzh-gold-primary">
                   {service.highlight}
                 </span>
-                <h3 className="text-2xl font-elegant font-semibold text-kitchen-lux-dark-green-800">
+                <h3 className="text-2xl font-elegant font-semibold text-iptvzh-navy-blue">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-kitchen-lux-dark-green-700">
+                <p className="text-sm leading-relaxed text-iptvzh-gray-blue">
                   {service.description}
                 </p>
-                <span className="text-sm font-semibold uppercase tracking-[0.25em] text-kitchen-lux-dark-green-800 group-hover:text-kitchen-lux-dark-green-600 transition-colors duration-200">
-                  Decouvrir le service
+                <div className="mt-2 space-y-1">
+                  {service.products.slice(0, 3).map((product, index) => (
+                    <div key={index} className="text-xs text-iptvzh-gold-primary">
+                      • {product}
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm font-semibold uppercase tracking-[0.25em] text-iptvzh-navy-blue group-hover:text-iptvzh-gold-primary transition-colors duration-200">
+                  Voir les produits
                 </span>
               </div>
             </Link>
@@ -101,9 +142,9 @@ export const ServicesPreview = (): JSX.Element => {
         <div className="mt-12 flex justify-center">
           <Link
             href="/services"
-            className="inline-flex rounded-full border border-kitchen-lux-dark-green-400 px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-kitchen-lux-dark-green-700 transition-colors duration-200 hover:border-kitchen-lux-dark-green-600 hover:text-kitchen-lux-dark-green-800 hover:bg-kitchen-lux-dark-green-50"
+            className="inline-flex rounded-full border border-iptvzh-gold-primary px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-iptvzh-navy-blue transition-colors duration-200 hover:border-iptvzh-gold-dark hover:text-iptvzh-black-deep hover:bg-iptvzh-gold-soft"
           >
-            Voir tous les services
+            Voir tous les produits
           </Link>
         </div>
       </div>
