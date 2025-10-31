@@ -21,6 +21,11 @@
   --gray-blue: #64748B;
   --gray-blue-light: #94A3B8;
   --footer-dark: #0F172A;
+  /* New design colors */
+  --yellow-primary: #FFD700;
+  --yellow-bright: #FFEB3B;
+  --green-whatsapp: #25D366;
+  --purple-accent: #7C3AED;
   
   /* Legacy variables for compatibility */
   --page-bg-start: var(--white-clean);

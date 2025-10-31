@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import Image from 'next/image'
+'use client'
 
 type ServiceCard = {
   id: string
@@ -13,139 +12,104 @@ type ServiceCard = {
 
 const services: ServiceCard[] = [
   {
-    id: 'iptv-streaming',
-    title: '📺 IPTV & Streaming',
+    id: 'solutions-reseau-hebergement',
+    title: '🖥️ Solutions Réseau et Hébergement',
     description:
-      'IPTV Yinix, Dream IPTV, Dino IPTV, Magnum OTT, Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime. Profitez de milliers de chaînes et de films en illimité !',
-    highlight: 'Milliers de chaînes',
-    image: '/picturs/gogo.jpg',
-    href: '/services#iptv-streaming',
-    products: ['IPTV Yinix – 6 mois / 12 mois / 24 mois', 'Dream IPTV, Dino IPTV, Magnum OTT', 'Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime']
-  },
-  {
-    id: 'comptes-premium',
-    title: '💻 Comptes Premium & Abonnements',
-    description:
-      'Spotify Premium, Canva Pro, ChatGPT Plus (via clé d\'accès API), Envato Elements. Des outils professionnels à petit prix pour vos besoins créatifs et personnels.',
-    highlight: 'Outils professionnels',
-    image: '/picturs/1.jpg',
-    href: '/services#comptes-premium',
-    products: ['Spotify Premium', 'Canva Pro', 'ChatGPT Plus (via clé d\'accès API)', 'Envato Elements']
-  },
-  {
-    id: 'rdp-vps-cloud',
-    title: '🧠 RDP / VPS & Services Cloud',
-    description:
-      'RDP Google / Windows, VPS Premium pour hébergement, Serveurs dédiés haute performance. Puissance, sécurité et rapidité pour vos projets en ligne.',
-    highlight: 'Haute performance',
+      'RDP, HOST, VPS et SMTP pour tous vos besoins d\'hébergement et de serveurs. Services de qualité professionnelle avec support technique.',
+    highlight: 'Hébergement professionnel',
     image: '/picturs/iron.jpg',
-    href: '/services#rdp-vps-cloud',
-    products: ['RDP Google / Windows', 'VPS Premium pour hébergement', 'Serveurs dédiés haute performance']
+    href: '/services#solutions-reseau-hebergement',
+    products: ['RDP / HOST / VPS Premium', 'Serveurs SMTP', 'Hébergement haute performance']
   },
   {
-    id: 'vpn-securite',
-    title: '🔐 VPN & Sécurité',
+    id: 'divertissement-iptv',
+    title: '📺 Divertissement Numérique et IPTV',
     description:
-      'NordVPN, ExpressVPN, Surfshark. Protégez votre vie privée et accédez à tous vos contenus sans restrictions.',
-    highlight: 'Sécurité maximale',
-    image: '/picturs/hero.jpg',
-    href: '/services#vpn-securite',
-    products: ['NordVPN', 'ExpressVPN', 'Surfshark']
-  },
-  {
-    id: 'ecommerce-business',
-    title: '🛍️ E-commerce & Business Tools',
-    description:
-      'Comptes Shopify, Abonnements Dropify, Licences Microsoft Office / Windows. Tout pour booster votre activité en ligne.',
-    highlight: 'Business tools',
-    image: '/picturs/1.jpg',
-    href: '/services#ecommerce-business',
-    products: ['Comptes Shopify', 'Abonnements Dropify', 'Licences Microsoft Office / Windows']
-  },
-  {
-    id: 'design-creation',
-    title: '🎨 Outils de Design & Création',
-    description:
-      'Adobe Suite (Photoshop, Illustrator, Premiere), Canva Pro, Figma Premium. Créez, éditez et partagez sans limites.',
-    highlight: 'Création illimitée',
+      'Abonnements IPTV, activation Ibo Player/pro et applications complémentaires. Accédez à des milliers de chaînes et contenus en illimité.',
+    highlight: 'Divertissement illimité',
     image: '/picturs/gogo.jpg',
-    href: '/services#design-creation',
-    products: ['Adobe Suite (Photoshop, Illustrator, Premiere)', 'Canva Pro', 'Figma Premium']
+    href: '/services#divertissement-iptv',
+    products: ['Abonnements IPTV', 'Activation Ibo Player/pro', 'Applications complémentaires']
+  },
+  {
+    id: 'licences-logiciels',
+    title: '🔑 Licences et Logiciels',
+    description:
+      'Produits digitaux, programmes Windows et clés d\'activation. Solutions complètes pour vos besoins logiciels et système.',
+    highlight: 'Licences authentiques',
+    image: '/picturs/1.jpg',
+    href: '/services#licences-logiciels',
+    products: ['Produits digitaux', 'Programmes Windows', 'Windows Keys']
+  },
+  {
+    id: 'services-creation',
+    title: '🛠️ Services de Création et Développement',
+    description:
+      'Création de sites web, développement de programmes Windows/Android, création de logos professionnels et production vidéo créative.',
+    highlight: 'Services sur mesure',
+    image: '/picturs/gogo.jpg',
+    href: '/services#services-creation',
+    products: ['Ouvrir un site Web', 'Programmer sur Windows/Android', 'Créer un Logo professionnel']
+  },
+  {
+    id: 'contact-support',
+    title: '📞 Information et Support',
+    description:
+      'Besoin d\'aide ou d\'informations ? Contactez-nous pour toute question, demande de devis ou support client. Nous sommes là pour vous.',
+    highlight: 'Support client',
+    image: '/picturs/hero.jpg',
+    href: '/contact',
+    products: ['Support client dédié', 'Demandes de devis', 'Assistance personnalisée']
   },
 ]
 
 export const ServicesPreview = (): JSX.Element => {
+  const handleWhatsAppClick = (service: ServiceCard): void => {
+    const phoneNumber = '+33745947222'
+    const serviceTitle = service.title.includes(' ') ? service.title.substring(service.title.indexOf(' ') + 1) : service.title
+    const message = `Bonjour! Je suis intéressé(e) par: ${serviceTitle}\n\n${service.description}\n\nPouvez-vous me donner plus d'informations sur les prix et les options disponibles?`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   return (
-    <section className="px-4 py-24 sm:px-6 lg:px-8">
+    <section className="px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-iptvzh-gold-primary">
+        <div className="text-center mb-12">
+          <p className="text-xs uppercase tracking-[0.4em] text-iptvzh-gray-blue">
             Catégories principales
           </p>
-          <h2 className="mt-5 text-4xl font-elegant font-semibold text-iptvzh-navy-blue sm:text-5xl">
+          <h2 className="mt-5 text-4xl font-bold text-iptvzh-black-deep sm:text-5xl">
             Découvrez nos produits numériques premium
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-iptvzh-gray-blue">
-            Découvrez une large gamme de services digitaux : IPTV, comptes Netflix, RDP, VPN, 
-            hébergement, design tools et plus encore — livrés instantanément après paiement.
-          </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Link
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {services.filter(service => service.id !== 'contact-support').map((service) => (
+            <button
               key={service.id}
-              href={service.href}
-              className="group relative block overflow-hidden rounded-3xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/30 to-iptvzh-white-clean shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
+              onClick={() => handleWhatsAppClick(service)}
+              className="group relative block overflow-hidden rounded-2xl bg-gradient-to-br from-iptvzh-navy-blue-dark via-iptvzh-navy-blue-dark to-iptvzh-navy-blue-light shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full text-left"
+              type="button"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 flex items-center justify-center">
-                {service.image ? (
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="text-center text-neutral-400">
-                    <div className="text-4xl mb-2">📸</div>
-                    <p className="text-sm">Image à venir</p>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex h-full flex-col gap-5 p-6">
-                <span className="text-xs uppercase tracking-[0.35em] text-iptvzh-gold-primary">
-                  {service.highlight}
-                </span>
-                <h3 className="text-2xl font-elegant font-semibold text-iptvzh-navy-blue">
-                  {service.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-iptvzh-gray-blue">
-                  {service.description}
-                </p>
-                <div className="mt-2 space-y-1">
-                  {service.products.slice(0, 3).map((product, index) => (
-                    <div key={index} className="text-xs text-iptvzh-gold-primary">
-                      • {product}
-                    </div>
-                  ))}
+              <div className="flex h-full flex-col p-6 text-white min-h-[200px]">
+                <div className="mb-4 text-5xl flex items-center justify-center">
+                  {service.title.includes(' ') ? service.title.split(' ')[0] : service.title}
                 </div>
-                <span className="text-sm font-semibold uppercase tracking-[0.25em] text-iptvzh-navy-blue group-hover:text-iptvzh-gold-primary transition-colors duration-200">
-                  Voir les produits
-                </span>
+                <h3 className="text-lg font-bold text-white mb-3 text-center">
+                  {service.title.includes(' ') ? service.title.substring(service.title.indexOf(' ') + 1) : service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/90 mb-4 text-center">
+                  {service.description.substring(0, 80)}...
+                </p>
+                <div className="mt-auto pt-4">
+                  <span className="block text-center text-xs font-bold bg-iptvzh-green-whatsapp rounded-lg px-3 py-2 group-hover:bg-iptvzh-green-success transition-colors duration-200">
+                    💬 Commander
+                  </span>
+                </div>
               </div>
-            </Link>
+            </button>
           ))}
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            href="/services"
-            className="inline-flex rounded-full border border-iptvzh-gold-primary px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-iptvzh-navy-blue transition-colors duration-200 hover:border-iptvzh-gold-dark hover:text-iptvzh-black-deep hover:bg-iptvzh-gold-soft"
-          >
-            Voir tous les produits
-          </Link>
         </div>
       </div>
     </section>

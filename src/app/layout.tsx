@@ -87,7 +87,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body
-        className={`${inter.className} bg-gradient-elegant min-h-screen text-slate-900`}
+        className={`${inter.className} bg-white min-h-screen text-slate-900`}
       >
         <Navbar />
         <main className="pt-20 md:pt-24 pb-20">{children}</main>

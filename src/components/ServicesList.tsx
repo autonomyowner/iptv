@@ -1,6 +1,6 @@
+'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
 type Service = {
   id: string
@@ -24,106 +24,84 @@ type SpecialOffer = {
 
 const services: Service[] = [
   {
-    id: 'iptv-streaming',
-    title: '📺 IPTV & Streaming',
+    id: 'solutions-reseau-hebergement',
+    title: '🖥️ Solutions Réseau et Hébergement',
     description:
-      'IPTV Yinix, Dream IPTV, Dino IPTV, Magnum OTT, Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime. Profitez de milliers de chaînes et de films en illimité !',
+      'RDP, HOST, VPS et SMTP pour tous vos besoins d\'hébergement et de serveurs. Services de qualité professionnelle avec support technique.',
     features: [
-      'IPTV Yinix – 6 mois / 12 mois / 24 mois',
-      'Dream IPTV, Dino IPTV, Magnum OTT',
-      'Abonnement Shahid VIP, Netflix, OSN+, Amazon Prime',
-      'Milliers de chaînes et de films en illimité',
-      'Livraison instantanée après paiement',
-    ],
-    image: '/picturs/gogo.jpg',
-    signature: 'Milliers de chaînes',
-    icon: '📺',
-    href: '/services#iptv-streaming',
-  },
-  {
-    id: 'comptes-premium',
-    title: '💻 Comptes Premium & Abonnements',
-    description:
-      'Spotify Premium, Canva Pro, ChatGPT Plus (via clé d\'accès API), Envato Elements. Des outils professionnels à petit prix pour vos besoins créatifs et personnels.',
-    features: [
-      'Spotify Premium',
-      'Canva Pro',
-      'ChatGPT Plus (via clé d\'accès API)',
-      'Envato Elements',
-      'Outils professionnels à petit prix',
-    ],
-    image: '/picturs/1.jpg',
-    signature: 'Outils professionnels',
-    icon: '💻',
-    href: '/services#comptes-premium',
-  },
-  {
-    id: 'rdp-vps-cloud',
-    title: '🧠 RDP / VPS & Services Cloud',
-    description:
-      'RDP Google / Windows, VPS Premium pour hébergement, Serveurs dédiés haute performance. Puissance, sécurité et rapidité pour vos projets en ligne.',
-    features: [
-      'RDP Google / Windows',
-      'VPS Premium pour hébergement',
-      'Serveurs dédiés haute performance',
-      'Puissance, sécurité et rapidité',
+      'RDP / HOST / VPS Premium',
+      'Serveurs SMTP',
+      'Hébergement haute performance',
       'Support technique 24/7',
     ],
     image: '/picturs/iron.jpg',
-    signature: 'Haute performance',
-    icon: '🧠',
-    href: '/services#rdp-vps-cloud',
+    signature: 'Hébergement professionnel',
+    icon: '🖥️',
+    href: '/services#solutions-reseau-hebergement',
   },
   {
-    id: 'vpn-securite',
-    title: '🔐 VPN & Sécurité',
+    id: 'divertissement-iptv',
+    title: '📺 Divertissement Numérique et IPTV',
     description:
-      'NordVPN, ExpressVPN, Surfshark. Protégez votre vie privée et accédez à tous vos contenus sans restrictions.',
+      'Abonnements IPTV, activation Ibo Player/pro et applications complémentaires. Accédez à des milliers de chaînes et contenus en illimité.',
     features: [
-      'NordVPN',
-      'ExpressVPN',
-      'Surfshark',
-      'Protection de la vie privée',
-      'Accès sans restrictions',
+      'Abonnements IPTV',
+      'Activation Ibo Player/pro',
+      'Applications complémentaires',
+      'Milliers de chaînes disponibles',
     ],
-    image: '/picturs/hero.jpg',
-    signature: 'Sécurité maximale',
-    icon: '🔐',
-    href: '/services#vpn-securite',
+    image: '/picturs/ip.png',
+    signature: 'Divertissement illimité',
+    icon: '📺',
+    href: '/services#divertissement-iptv',
   },
   {
-    id: 'ecommerce-business',
-    title: '🛍️ E-commerce & Business Tools',
+    id: 'licences-logiciels',
+    title: '🔑 Licences et Logiciels',
     description:
-      'Comptes Shopify, Abonnements Dropify, Licences Microsoft Office / Windows. Tout pour booster votre activité en ligne.',
+      'Produits digitaux, programmes Windows et clés d\'activation. Solutions complètes pour vos besoins logiciels et système.',
     features: [
-      'Comptes Shopify',
-      'Abonnements Dropify',
-      'Licences Microsoft Office / Windows',
-      'Outils pour booster votre activité',
-      'Support et formation inclus',
+      'Produits digitaux',
+      'Programmes Windows',
+      'Windows Keys',
+      'Licences premium',
     ],
     image: '/picturs/1.jpg',
-    signature: 'Business tools',
-    icon: '🛍️',
-    href: '/services#ecommerce-business',
+    signature: 'Licences authentiques',
+    icon: '🔑',
+    href: '/services#licences-logiciels',
   },
   {
-    id: 'design-creation',
-    title: '🎨 Outils de Design & Création',
+    id: 'services-creation',
+    title: '🛠️ Services de Création et Développement',
     description:
-      'Adobe Suite (Photoshop, Illustrator, Premiere), Canva Pro, Figma Premium. Créez, éditez et partagez sans limites.',
+      'Création de sites web, développement de programmes Windows/Android, création de logos professionnels et production vidéo créative.',
     features: [
-      'Adobe Suite (Photoshop, Illustrator, Premiere)',
-      'Canva Pro',
-      'Figma Premium',
-      'Création sans limites',
-      'Formation et support inclus',
+      'Ouvrir un site Web',
+      'Programmer sur Windows/Android',
+      'Créer un Logo professionnel',
+      'Créer une vidéo créative',
     ],
-    image: '/picturs/gogo.jpg',
-    signature: 'Création illimitée',
-    icon: '🎨',
-    href: '/services#design-creation',
+    image: '/picturs/1.jpg',
+    signature: 'Services sur mesure',
+    icon: '🛠️',
+    href: '/services#services-creation',
+  },
+  {
+    id: 'contact-support',
+    title: '📞 Information et Support',
+    description:
+      'Besoin d\'aide ou d\'informations ? Contactez-nous pour toute question, demande de devis ou support client. Nous sommes là pour vous.',
+    features: [
+      'Support client dédié',
+      'Demandes de devis',
+      'Questions générales',
+      'Assistance personnalisée',
+    ],
+    image: '/picturs/hero.jpg',
+    signature: 'Support client',
+    icon: '📞',
+    href: '/contact',
   },
 ]
 
@@ -159,65 +137,93 @@ const specialOffers: SpecialOffer[] = [
 ]
 
 export const ServicesList = (): JSX.Element => {
+  const handleWhatsAppClick = (service: Service): void => {
+    const phoneNumber = '+33745947222'
+    const serviceTitle = service.title.includes(' ') ? service.title.substring(service.title.indexOf(' ') + 1) : service.title
+    const message = `Bonjour! Je suis intéressé(e) par: ${serviceTitle}\n\n${service.description}\n\nPouvez-vous me donner plus d'informations sur les prix et les options disponibles?`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
+  const handleProductClick = (offer: SpecialOffer): void => {
+    const phoneNumber = '+33745947222'
+    const message = `Bonjour! Je souhaite acheter: ${offer.title}\n\nPrix: ${offer.price}\nDescription: ${offer.description}\n\nJe voudrais procéder à l'achat.`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   return (
-    <div className="space-y-20">
-      {/* Categories Grid */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service) => (
-          <Link
-            key={service.id}
-            href={service.href}
-            className="group relative block overflow-hidden rounded-3xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/30 to-iptvzh-white-clean shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 flex items-center justify-center">
-              {service.image ? (
+    <div className="space-y-24">
+      {/* Services Categories Section */}
+      <div>
+        <div className="text-center mb-12">
+          <p className="text-sm font-semibold text-iptvzh-purple-accent uppercase tracking-wider mb-3">
+            Nos Services
+          </p>
+          <h2 className="text-3xl font-bold text-iptvzh-black-deep sm:text-4xl mb-4">
+            Solutions Complètes pour Vos Besoins
+          </h2>
+          <p className="text-lg text-iptvzh-gray-blue max-w-2xl mx-auto">
+            Explorez notre gamme complète de services numériques professionnels
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {services.filter(service => service.id !== 'contact-support').map((service) => (
+            <button
+              key={service.id}
+              onClick={() => handleWhatsAppClick(service)}
+              className="group relative block overflow-hidden rounded-3xl bg-white border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 w-full text-left"
+              type="button"
+            >
+              {/* Image Header */}
+              <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-              ) : (
-                <div className="text-center text-neutral-400">
-                  <div className="text-6xl mb-2">{service.icon}</div>
-                  <p className="text-sm">Image à venir</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-iptvzh-navy-blue-dark/80 to-iptvzh-navy-blue-light/80" />
+                <div className="absolute top-4 left-4">
+                  <div className="text-4xl">{service.icon}</div>
                 </div>
-              )}
-            </div>
-
-            <div className="flex h-full flex-col gap-5 p-6">
-              <span className="text-xs uppercase tracking-[0.35em] text-iptvzh-gold-primary">
-                {service.signature}
-              </span>
-              <h3 className="text-2xl font-elegant font-semibold text-iptvzh-navy-blue">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-iptvzh-gray-blue">
-                {service.description}
-              </p>
-              <div className="mt-2 space-y-1">
-                {service.features.slice(0, 3).map((feature, index) => (
-                  <div key={index} className="text-xs text-iptvzh-gold-primary">
-                    • {feature}
-                  </div>
-                ))}
               </div>
-              <span className="text-sm font-semibold uppercase tracking-[0.25em] text-iptvzh-navy-blue group-hover:text-iptvzh-gold-primary transition-colors duration-200">
-                Voir les produits
-              </span>
-            </div>
-          </Link>
-        ))}
+
+              <div className="flex h-full flex-col p-6 min-h-[280px]">
+                <h3 className="text-2xl font-bold text-iptvzh-black-deep mb-3 text-center group-hover:text-iptvzh-purple-accent transition-colors">
+                  {service.title.includes(' ') ? service.title.substring(service.title.indexOf(' ') + 1) : service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-iptvzh-gray-blue mb-6 text-center flex-grow">
+                  {service.description}
+                </p>
+                
+                {/* Clear WhatsApp CTA */}
+                <div className="mt-auto pt-4">
+                  <div className="flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 bg-gradient-to-r from-iptvzh-green-whatsapp to-iptvzh-green-success text-white font-bold text-base shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-200">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span>Commander sur WhatsApp</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Special Offers Section */}
-      <div className="mt-20">
+      <div>
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-elegant font-semibold text-iptvzh-navy-blue sm:text-5xl">
-            🔥 Offres Spéciales
+          <p className="text-sm font-semibold text-iptvzh-purple-accent uppercase tracking-wider mb-3">
+            Meilleures Offres
+          </p>
+          <h2 className="text-3xl font-bold text-iptvzh-black-deep sm:text-4xl mb-4">
+            ✨ Offres Spéciales et Promotions
           </h2>
-          <p className="mt-4 text-lg text-iptvzh-gray-blue">
-            Les meilleures ventes du moment — livraison instantanée !
+          <p className="text-lg text-iptvzh-gray-blue max-w-2xl mx-auto">
+            Les meilleures ventes du moment — livraison instantanée après paiement !
           </p>
         </div>
 
@@ -225,27 +231,37 @@ export const ServicesList = (): JSX.Element => {
           {specialOffers.map((offer) => (
             <div
               key={offer.id}
-              className="relative overflow-hidden rounded-2xl border border-iptvzh-gold-primary/30 bg-gradient-to-br from-iptvzh-gold-soft/20 to-iptvzh-white-clean shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-iptvzh-gold-primary/20"
+              className="group relative overflow-hidden rounded-2xl bg-white border-2 border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center rounded-full bg-iptvzh-gold-primary px-3 py-1 text-xs font-semibold text-iptvzh-white-clean">
+              <div className="absolute top-4 right-4 z-10">
+                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-iptvzh-yellow-primary to-iptvzh-yellow-bright px-3 py-1 text-xs font-bold text-iptvzh-black-deep shadow-md">
                   {offer.badge}
                 </span>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-elegant font-semibold text-iptvzh-navy-blue mb-2">
+              <div className="p-6 pt-12">
+                <h3 className="text-xl font-bold text-iptvzh-black-deep mb-3 group-hover:text-iptvzh-purple-accent transition-colors">
                   {offer.title}
                 </h3>
-                <p className="text-sm text-iptvzh-gray-blue mb-4">
+                <p className="text-sm text-iptvzh-gray-blue mb-6 leading-relaxed">
                   {offer.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-iptvzh-gold-primary">
-                    {offer.price}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <div className="flex flex-col">
+                    <span className="text-xs text-iptvzh-gray-blue mb-1">Prix</span>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-iptvzh-navy-blue to-iptvzh-purple-accent bg-clip-text text-transparent">
+                      {offer.price}
+                    </div>
                   </div>
-                  <button className="rounded-full bg-iptvzh-gold-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-iptvzh-white-clean transition-colors duration-200 hover:bg-iptvzh-gold-dark">
-                    Acheter
+                  <button 
+                    onClick={() => handleProductClick(offer)}
+                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-iptvzh-green-whatsapp to-iptvzh-green-success px-5 py-2.5 text-sm font-bold text-white transition-all duration-200 hover:shadow-lg hover:scale-105"
+                    type="button"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span>Acheter</span>
                   </button>
                 </div>
               </div>

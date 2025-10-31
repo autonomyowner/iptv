@@ -42,8 +42,8 @@ export const Navbar = (): JSX.Element => {
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? 'bg-iptvzh-white-clean/92 backdrop-blur border-b border-iptvzh-gray-blue-light shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm'
+          : 'bg-white'
       }`}
     >
       <div className="mx-auto flex max-w-6xl flex-col px-4 sm:px-6 lg:px-8">
@@ -62,11 +62,11 @@ export const Navbar = (): JSX.Element => {
               />
             </div>
             <div className="flex flex-col leading-tight text-iptvzh-black-deep">
-              <span className="text-xl font-semibold tracking-wide uppercase">
+              <span className="text-xl font-bold tracking-wide text-iptvzh-purple-accent">
                 iptvzh
               </span>
               <span className="text-xs font-light text-iptvzh-gray-blue">
-                Produits numériques à prix imbattables
+                Produits numériques premium
               </span>
             </div>
           </Link>
@@ -78,10 +78,10 @@ export const Navbar = (): JSX.Element => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-200 ${
+                  className={`text-sm font-semibold transition-colors duration-200 ${
                     isActive
-                      ? 'text-iptvzh-black-deep'
-                      : 'text-iptvzh-gray-blue hover:text-iptvzh-black-deep'
+                      ? 'text-iptvzh-navy-blue border-b-2 border-iptvzh-navy-blue'
+                      : 'text-iptvzh-gray-blue hover:text-iptvzh-navy-blue'
                   }`}
                 >
                   {item.label}
@@ -92,12 +92,12 @@ export const Navbar = (): JSX.Element => {
 
           <button
             onClick={toggleMobileMenu}
-            className="inline-flex items-center justify-center rounded-full border border-iptvzh-gold-primary bg-gradient-to-r from-iptvzh-gold-soft to-iptvzh-gold-light px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-iptvzh-navy-blue transition-all duration-200 hover:border-iptvzh-gold-dark hover:bg-gradient-to-r hover:from-iptvzh-gold-light hover:to-iptvzh-gold-primary hover:text-iptvzh-black-deep hover:shadow-md hover:shadow-iptvzh-gold-primary/30 md:hidden"
+            className="inline-flex items-center justify-center rounded-lg bg-iptvzh-navy-blue px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-iptvzh-navy-blue-dark md:hidden"
             aria-expanded={isMobileMenuOpen}
             aria-label="Basculer la navigation"
             type="button"
           >
-            {isMobileMenuOpen ? 'Fermer' : 'Menu'}
+            {isMobileMenuOpen ? '✕' : '☰'}
           </button>
         </div>
 
@@ -106,7 +106,7 @@ export const Navbar = (): JSX.Element => {
             isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="mb-4 rounded-2xl border border-iptvzh-gold-primary/20 bg-gradient-to-br from-iptvzh-gold-soft/50 to-iptvzh-white-clean px-3 pb-4 pt-2 backdrop-blur shadow-lg shadow-iptvzh-gold-primary/20">
+          <div className="mb-4 rounded-xl border border-gray-200 bg-white px-3 pb-4 pt-2 backdrop-blur shadow-lg">
             <div className="grid gap-2">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
@@ -114,10 +114,10 @@ export const Navbar = (): JSX.Element => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-full px-4 py-3 text-sm font-medium uppercase tracking-[0.2em] transition-all duration-200 ${
+                    className={`rounded-lg px-4 py-3 text-sm font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'bg-iptvzh-gold-primary text-iptvzh-white-clean shadow-sm'
-                        : 'text-iptvzh-navy-blue hover:bg-iptvzh-gold-primary hover:text-iptvzh-white-clean hover:shadow-sm'
+                        ? 'bg-iptvzh-navy-blue text-white shadow-sm'
+                        : 'text-iptvzh-navy-blue hover:bg-iptvzh-navy-blue/10'
                     }`}
                   >
                     {item.label}

@@ -22,12 +22,27 @@ module.exports = {
             blue: '#1E3A8A',
             'blue-dark': '#1E40AF',
             'blue-light': '#3B82F6',
+            'gradient-start': '#1E40AF',
+            'gradient-end': '#3B82F6',
           },
           gold: {
             primary: '#D97706',
             light: '#F59E0B',
             dark: '#B45309',
             soft: '#FEF3C7',
+          },
+          yellow: {
+            primary: '#FFD700',
+            bright: '#FFEB3B',
+            dark: '#F9A825',
+          },
+          green: {
+            whatsapp: '#25D366',
+            success: '#4CAF50',
+          },
+          purple: {
+            accent: '#7C3AED',
+            light: '#A78BFA',
           },
           gray: {
             blue: '#64748B',
