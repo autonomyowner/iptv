@@ -33,7 +33,7 @@ export const WhatsAppButton = (): JSX.Element => {
         type="button"
         aria-label="Discuter sur WhatsApp"
       >
-        💬 WhatsApp
+WhatsApp
       </button>
     </div>
   )

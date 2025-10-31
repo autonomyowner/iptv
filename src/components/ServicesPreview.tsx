@@ -13,7 +13,7 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     id: 'solutions-reseau-hebergement',
-    title: '🖥️ Solutions Réseau et Hébergement',
+    title: 'Solutions Réseau et Hébergement',
     description:
       'RDP, HOST, VPS et SMTP pour tous vos besoins d\'hébergement et de serveurs. Services de qualité professionnelle avec support technique.',
     highlight: 'Hébergement professionnel',
@@ -23,7 +23,7 @@ const services: ServiceCard[] = [
   },
   {
     id: 'divertissement-iptv',
-    title: '📺 Divertissement Numérique et IPTV',
+    title: 'Divertissement Numérique et IPTV',
     description:
       'Abonnements IPTV, activation Ibo Player/pro et applications complémentaires. Accédez à des milliers de chaînes et contenus en illimité.',
     highlight: 'Divertissement illimité',
@@ -33,7 +33,7 @@ const services: ServiceCard[] = [
   },
   {
     id: 'licences-logiciels',
-    title: '🔑 Licences et Logiciels',
+    title: 'Licences et Logiciels',
     description:
       'Produits digitaux, programmes Windows et clés d\'activation. Solutions complètes pour vos besoins logiciels et système.',
     highlight: 'Licences authentiques',
@@ -43,7 +43,7 @@ const services: ServiceCard[] = [
   },
   {
     id: 'services-creation',
-    title: '🛠️ Services de Création et Développement',
+    title: 'Services de Création et Développement',
     description:
       'Création de sites web, développement de programmes Windows/Android, création de logos professionnels et production vidéo créative.',
     highlight: 'Services sur mesure',
@@ -53,7 +53,7 @@ const services: ServiceCard[] = [
   },
   {
     id: 'contact-support',
-    title: '📞 Information et Support',
+    title: 'Information et Support',
     description:
       'Besoin d\'aide ou d\'informations ? Contactez-nous pour toute question, demande de devis ou support client. Nous sommes là pour vous.',
     highlight: 'Support client',
@@ -93,18 +93,15 @@ export const ServicesPreview = (): JSX.Element => {
               type="button"
             >
               <div className="flex h-full flex-col p-6 text-white min-h-[200px]">
-                <div className="mb-4 text-5xl flex items-center justify-center">
-                  {service.title.includes(' ') ? service.title.split(' ')[0] : service.title}
-                </div>
                 <h3 className="text-lg font-bold text-white mb-3 text-center">
-                  {service.title.includes(' ') ? service.title.substring(service.title.indexOf(' ') + 1) : service.title}
+                  {service.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-white/90 mb-4 text-center">
                   {service.description.substring(0, 80)}...
                 </p>
                 <div className="mt-auto pt-4">
                   <span className="block text-center text-xs font-bold bg-iptvzh-green-whatsapp rounded-lg px-3 py-2 group-hover:bg-iptvzh-green-success transition-colors duration-200">
-                    💬 Commander
+                    Commander
                   </span>
                 </div>
               </div>

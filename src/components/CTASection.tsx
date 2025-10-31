@@ -41,7 +41,7 @@ export const CTASection = (): JSX.Element => {
               className="rounded-xl bg-iptvzh-yellow-primary px-10 py-4 text-base font-bold text-iptvzh-black-deep transition-all duration-200 hover:bg-iptvzh-yellow-bright hover:shadow-lg hover:scale-105"
               type="button"
             >
-              🛒 Découvrir nos abonnements
+Découvrir nos abonnements
             </button>
         </div>
 
