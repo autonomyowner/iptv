@@ -13,7 +13,6 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: 'Accueil', href: '/' },
   { label: 'Produits', href: '/services' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 export const Navbar = (): JSX.Element => {
