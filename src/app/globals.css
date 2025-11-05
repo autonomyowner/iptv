@@ -1,104 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-  color-scheme: light;
-  /* IPTVZH Blue & Gold Color Palette */
-  --white-clean: #FFFFFF;
-  --white-soft: #F8FAFC;
-  --black-deep: #0F172A;
-  --black-soft: #1E293B;
-  --navy-blue: #1E3A8A;
-  --navy-blue-dark: #0E1C26;
-  --navy-blue-light: #3B82F6;
-  --gold-primary: #D97706;
-  --gold-light: #F59E0B;
-  --gold-dark: #B45309;
-  --gold-soft: #FEF3C7;
-  --gray-blue: #64748B;
-  --gray-blue-light: #94A3B8;
-  --footer-dark: #0F172A;
-  /* New design colors */
-  --yellow-primary: #FFD700;
-  --yellow-bright: #FFEB3B;
-  --green-whatsapp: #25D366;
-  --purple-accent: #7C3AED;
-  
-  /* Legacy variables for compatibility */
-  --page-bg-start: var(--white-clean);
-  --page-bg-end: var(--white-soft);
-  --page-foreground: 15, 23, 42;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  @apply bg-light text-dark;
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  color: rgb(var(--page-foreground));
-  background: linear-gradient(135deg, var(--page-bg-start), var(--page-bg-end));
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Custom gradient utility */
-.bg-gradient-elegant {
-  background: linear-gradient(145deg, var(--white-clean), var(--white-soft));
-}
-
-/* IPTVZH Blue & Gold gradients */
-.bg-gradient-iptvzh {
-  background: linear-gradient(135deg, var(--navy-blue), var(--navy-blue-dark));
-}
-
-.bg-gradient-iptvzh-hero {
-  background: linear-gradient(135deg, var(--navy-blue-dark), var(--navy-blue-dark), var(--navy-blue));
-}
-
-.bg-gradient-gold {
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
-}
-
-.bg-gradient-blue-gold {
-  background: linear-gradient(135deg, var(--navy-blue), var(--gold-primary));
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--white-soft);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--marble-gray);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--black-soft);
-} 
